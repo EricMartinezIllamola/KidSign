@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.quizz_vocales {
+  height: 100vh;
+  background-color: rgb(46, 211, 0);
+}
+
+.quizz_alphabet {
+  height: 100vh;
+  background-color: rgb(0, 199, 206);
+}
+
+.quizz_numeros {
+  height: 100vh;
+  background-color: rgb(190, 128, 226);
+}
+
+.quizz_global {
+  height: 100vh;
+  background-color: rgb(255, 16, 135);
+}
+
+
+.quizz_mono {
+  height: 80%;
+  object-fit: contain;
+}
+
+.quizz_mono_salta {
+  animation-duration: 1100ms;
+  animation-name: gira_salta;
+  animation-timing-function: linear;
+  animation-iteration-count: 2; 
+}
+
+@keyframes gira_salta {
+  0% {
+    transform: rotate(0deg) scale(1); 
+  }
+
+  25% {
+    transform: rotate(90deg) scale(1.4);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.8);
+  }
+
+  75% {
+    transform: rotate(270deg) scale(1.4);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.quizz_up {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+p {margin: 0;}
+
+.quizz_points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid black;
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  letter-spacing: 3px;
+}
+
+.quizz_num {
+  height: 80%;
+  object-fit: contain;
+}
+
+.quizz_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: 50px;
+}
+
+.quizz_down .quizz_cards {
+  background-color: #fff;
+  height: 50vh;
+  aspect-ratio: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.quizz_down .quizz_cards:hover {
+  background-color: lightgreen;
+}
+
+.quizz_down button .quizz_numB {
+  height: 40vh;
+  object-fit: contain;
+}
+
+.quizz_down .quizz_link {
+  visibility: hidden;
+  align-self: self-end;
+}
+
+.show {
+  visibility: visible;
+}
+
+.quizz_exit, .quizz_continue {
+  height: fit-content;
+  font-size: 30px;
+  padding: 7px 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px #fff dashed;
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.quizz_exit:hover, .quizz_continue:hover {
+  transform: scale(1.1);
+  background-color: #ffffffb1;
+  color: #000;
+  box-shadow: 10px -0px 15px #000;
+  border: 0px #fff dashed;
+  /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004, #0004); */
+}
+
+.quizz_expand {
+  height: 10vh;
+}

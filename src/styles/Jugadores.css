@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .fondo-uno{
+    background-color: #ff881b;
+
+  }
+  .fondo-dos{
+    background-color: rgb(169, 91, 247);
+
+  }
+  .fondo-tres{
+    background-color: rgb(91, 177, 247);
+
+  }
+
+
+  .bodyJugadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #060606;
+    transform-style: preserve-3d;
+    color: #fff;
+    transition: 1000ms;
+    gap: 2rem;
+  }
+  .Njugadores{
+    font-size:x-large;
+  }
+  .imgJugadores{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .body .btns{
+    justify-content: center;
+  }
+  
+  .btnCrearJugador {
+    color: #fff;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    /* margin: 20%; */
+    /* border: 1px solid rgb(131, 131, 131);
+    background-color:
+    rgb(131, 131, 131); */
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  .btnCrearJugador:hover{
+    color: #fff;
+    /* margin: 20%; */
+    border-color: transparent;
+    /* background-color: rgb(46, 211, 0); */
+    /* box-shadow: 0px 0px 15px rgb(46, 211, 0); */
+  }
+  
+  .divCrearJugador{
+    text-align: center;
+  }
+  .ulJugadores{
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+  }

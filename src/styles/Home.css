@@ -1,0 +1,99 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 100%;
+  }
+
+  .home_box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+
+  .home_box span {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("../assets/Mainimagenes/verdetrans.png");
+    background-repeat: no-repeat;
+    animation: animate 14s linear infinite;
+  }
+
+  @keyframes animate {
+    0%, 15% {
+      scale: 1;
+      rotate: 0deg;
+      translate: 0 0;
+      transform-origin: center;
+    }
+    20%, 25% {
+      scale: 0.8;
+      rotate: 0deg;
+      translate: 0 0;
+      transform-origin: center;
+    }
+    30% {
+      scale: 0.8;
+      rotate: 360deg;
+      translate: 350px 75px;
+      transform-origin: 200px;
+    }
+    35%, 45% {
+      scale: 1;
+      rotate: 360deg;
+      translate: 350px 75px;
+      transform-origin: center;
+    }
+    50% {
+      scale: 0.8;
+      rotate: 360deg;
+      translate: 350px 75px;
+      transform-origin: 200px;
+    }
+    55% {
+      scale: 0.8;
+      rotate: 720deg;
+      translate: -350px -75px;
+      transform-origin: -200px;
+    }
+    60%, 70% {
+      scale: 1;
+      rotate: 720deg;
+      translate: -350px -75px;
+      transform-origin: center;
+    }
+    75% {
+      scale: 0.8;
+      rotate: 720deg;
+      translate: -350px -75px;
+      transform-origin: -200px;
+    }
+    80% {
+      scale: 0.8;
+      rotate: 0deg;
+      translate: 0 0;
+      transform-origin: center;
+      background-color: transparent;
+    }
+    85%, 95% {
+      scale: 1;
+      rotate: 0deg;
+      translate: 0 0;
+      transform-origin: center;
+      background-color: lightgoldenrodyellow;
+    }
+    100% {
+      scale: 1;
+      rotate: 0deg;
+      translate: 0 0;
+      transform-origin: center;
+      background-color: transparent;
+    }
+  }
+
+  /* #verdetrans {
+    width: 650px;
+    object-fit: contain; 
+  } */

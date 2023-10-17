@@ -1,0 +1,73 @@
+.bodyGame {
+    height: 100vh;
+    background-image: url(../assets/monitos.jpeg);
+    background-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+/* .btnSeleccionCam {
+    height: fit-content;
+    font-size: 50px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 550;
+    letter-spacing: 3px;
+    background: rgba(0, 0, 0, 0.8);
+    color: orange;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+
+.btnSeleccionCam:hover {
+    background: rgba(0, 0, 0);
+} */
+
+.btnSeleccionCam {
+    position: relative;
+    color: #fff;
+    /* background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987); */
+    background: linear-gradient(60deg, green, brown, orange);
+    padding: 20px 50px;
+    border-radius: 10px;
+}
+
+.btnSeleccionCam span {
+    position: relative;
+    z-index: 1;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.btnSeleccionCam::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: #272727;
+    border-radius: 9px;
+    transition: 500ms;
+}
+
+.btnSeleccionCam:hover::before {
+    opacity: 0.8;
+}
+
+.btnSeleccionCam::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    /* background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987); */
+    background: linear-gradient(60deg, green, brown, orange);
+    border-radius: 9px;
+    transition: 500ms;
+    opacity: 0;
+    filter: blur(30px);
+}
+
+.btnSeleccionCam:hover::after {
+    opacity: 1;
+}

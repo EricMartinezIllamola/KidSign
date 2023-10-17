@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+
+/* COLORES AHORA: 
+verde footer, vocales y nav rgb(46, 211, 0);
+sección letras: rgb(0, 199, 206) solid;
+sección números: rgb(190, 128, 226);
+sección global: rgb(255, 16, 135);
+Fondo main official:  rgb(221, 221, 221); 
+CARROT #ED694E
+LILA #A760F7
+TURQUESA #63D4E0
+VERDE #A2F760
+NARANJA FLOJO #EDBB5C */
+
+
+.root {
+  /* --color-bg: #ffebd2; */
+  /* --color-bg-variant:; */
+  --color-primary: #2ed300;
+  --color-primary-variant: #d53e0f;
+  --transition: all 400ms ease;
+  --color-white: #fff;
+  --color-green: #a1f064;
+  --color-h1: #a1f064;
+  --color-vocals: #2ed300;
+  --color-global: #ff1087;
+  --color-number: #be80e2;
+  --color-alphabhet: #00c7ce;
+  --color-black: rgb(5, 5, 5);
+}
+
+.main_div {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  font: 700;
+}
+
+.bodymain {
+  background-color: #A760F7;
+}
+
+.Main {
+  display: flex;
+}
+
+.Title h1 {
+  color: rgb(5, 5, 5);
+}
+
+
+/*---------------------------ABOUT---------------------------*/
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 0% 10%;
+}
+
+.about h2:first-child {
+  color: #a1f064;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+#aboutcohete,
+#aboutsign,
+#aboutbook {
+  height: 60px;
+  object-fit: contain;
+}
+
+.aboutcontent {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  margin-bottom: 5%;
+  margin-top: 5%;
+  gap: 10px;
+  color: black;
+  font-size: x-large;
+}
+
+.aboutcontent h3 {
+  color:darkorange;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.abouttext {
+  display: flex;
+  flex-direction: column;
+  font-size: xx-large;
+}
+
+.about p {
+  font-size: larger;
+  letter-spacing: 1px;
+}
+
+/*---------------------------FOOTER-------------------------*/
+.Footer {
+  background-color: #ff881b;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+/*-----------------SECTION NUMBERS ------------*/
+
+.esengmain {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px black;
+  height: 50px;
+}
+
+.section-numbers {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  border: 1px white solid;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  gap: 15%;
+}
+
+.A-Z {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.img-fixed {
+  object-fit: cover;
+  height: 180px;
+  width: 190px;
+}
+
+#eightsign,
+#eight,
+#one,
+#onesign,
+#two,
+#twosign,
+#three,
+#threesign,
+#four,
+#foursign,
+#five,
+#fivesign {
+  height: 243px;
+}
+
+#zero,
+#zerosign,
+#zerowign,
+#seven,
+#sevensign,
+#nine,
+#ninesign,
+#six,
+#sixsign {
+  height: 243px;
+}

@@ -1,0 +1,15 @@
+{
+    "Games": {
+        "Puntos": "Points: ",
+        "Ronda": "Round: ",
+        "BtnExit": "Exit",
+        "BtnNext": "Continue",
+        "1Jugador": "1 Player",
+        "2Jugador": "2 Players",
+        "BtnStart": "Start",
+        "Tiempo": "Time: ",
+        "Tiempo0": "Time: 0",
+        "PuntosA": "Points A: ",
+        "PuntosB": "Points B: "
+    }
+}

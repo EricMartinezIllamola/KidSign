@@ -1,0 +1,167 @@
+/*-----------------TEAM---------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.team-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.team-container h2 {
+  color: #a1f064;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-left: 10%;
+  margin-bottom: 5vh;
+}
+
+.team_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  gap: 30px;
+  letter-spacing: 1px;
+}
+
+.card {
+  width: 370px;
+  height: 470px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #000;
+  transition: 300ms;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.card h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+.card:hover {
+  /* background: linear-gradient(#23ff44, #3eff75); */
+  background-color: orange;
+  box-shadow: 10px 20px 40px #000;
+  color: #fff;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: 900ms;
+}
+
+.card:hover::before {
+  inset: 0px;
+  box-shadow: none;
+}
+
+.card .img-container {
+  width: 200px;
+  height: 200px;
+  background-color: #f3f3f3;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 50px auto 30px auto;
+  transition: 900ms;
+}
+
+.card:hover .img-container {
+  transform: scale(1.15);
+}
+
+.card .team_funcion {
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* .card:hover .team_funcion {
+  margin-bottom: 20px;
+} */
+
+#eric,
+#alex,
+#saira {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.contact-container {
+  position: relative;
+  left: -400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  cursor: pointer;
+  transition: 600ms;
+}
+
+.card:hover .contact-container {
+  left: 0;
+}
+
+.github, .linkedin {
+  width: 60px;
+  object-fit: contain;
+}
+
+.github:hover, .linkedin:hover {
+  transform: scale(1.25);
+  transition: 300ms;
+}
+
+@media (max-width: 1150px) {
+  .team_box {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    left: 0;
+  }
+  .card {
+    height: 500px;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  section {
+    padding: 1em 7em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em;
+  }
+
+  .card {
+    padding: 5em 1em;
+  }
+
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 1em;
+  }
+} */

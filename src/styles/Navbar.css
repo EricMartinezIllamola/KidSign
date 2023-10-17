@@ -1,0 +1,58 @@
+.Navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #ff881b;
+  color: white;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  letter-spacing: 4px;
+}
+
+.languagebtn-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.languagebtn-container:hover {
+  background-color: brown;
+}
+
+.nav_item {
+  width: 20%;
+}
+
+.nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.nav_link:hover {
+  background-color: brown;
+}
+
+.nav_lng img {
+  object-fit: contain;
+  transition: 500ms;
+}
+
+.uknav img {
+  height: 43px;
+}
+
+.spainnav img {
+  height: 50px;
+}
+
+.nav_lng:hover {
+  transform: scale(1.15);
+}
