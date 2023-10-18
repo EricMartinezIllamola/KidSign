@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
 import GameOver from '../PropMemori/GameOver';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const MemoryGamenum69 = () => {
+
+    const [t, i18n] = useTranslation("games"); //traduccion
+
     let arrayofImages = [
         { num: 1, name: 'five', img: require('../../assets/numbers/five.png'), isMatch: false },
         { num: 2, name: 'six', img: require('../../assets/numbers/six.png'), isMatch: false },
@@ -92,6 +97,7 @@ const MemoryGamenum69 = () => {
 
     return (
         <div className='memory_bg memory_bg_numbers'>
+            <Link to={'/Officialpage'}> <button className='memory_exit'>{t("Games.BtnExit")}</button></Link>
             <div className='containeR'>
                 <div className='score-container'>
                     <div className='score'><strong>Score:{score}</strong> </div>
@@ -108,6 +114,7 @@ const MemoryGamenum69 = () => {
                 </div>
                 {gameOver && <GameOver setTries={setTries} tries={tries} setGameOver={setGameOver} />}
             </div>
+            <Link to={'/SelecGam59Sin'} style={{ visibility: gameOver ? 'visible' : 'hidden' }} ><button className='memory_continue'>{t("Games.BtnNext")}</button></Link>
         </div>
     );
 }

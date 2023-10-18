@@ -129,7 +129,7 @@
 
 .section_down {
   align-items: center;
-  gap: 30%;
+  gap: calc(5% + 600px);
 }
 
 .section_vocales {

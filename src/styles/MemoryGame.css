@@ -9,6 +9,8 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: end;
+    gap: 1%;
 }
 
 .memory_bg_vocales {
@@ -155,4 +157,30 @@
 
 .stop-clicking {
     pointer-events: none;
+}
+
+.memory_exit,
+.memory_continue {
+    height: fit-content;
+    font-size: 30px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #833ab4ad, #fd1d1da9, #fcb045ad);
+    background-color: #ffffffb1;
+    /* border: 2px #fff dashed; */
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: 200ms;
+    margin-bottom: 15vh;
+}
+
+.memory_exit:hover,
+.memory_continue:hover {
+    transform: scale(1.1);
+    /* color: #000; */
+    color: #fff;
+    box-shadow: 10px -0px 15px #000;
+    /* border: 0px #fff dashed; */
 }

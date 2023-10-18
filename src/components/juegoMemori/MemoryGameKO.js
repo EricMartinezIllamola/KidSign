@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 import '../../styles/MemoryGame.css';
 import Card from '../PropMemori/Card';
 import GameOver from '../PropMemori/GameOver';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const MemoryGameKO = () => {
+
+    const [t, i18n] = useTranslation("games"); //traduccion
+
     let arrayofImages = [
         { num: 1, name: 'K', img: require('../../assets/letters/K.png'), isMatch: false },
         { num: 2, name: 'L', img: require('../../assets/letters/L.png'), isMatch: false },
@@ -92,6 +97,7 @@ const MemoryGameKO = () => {
 
     return (
         <div className='memory_bg memory_bg_alphabet'>
+            <Link to={'/Officialpage'}> <button className='memory_exit'>{t("Games.BtnExit")}</button></Link>
             <div className='containeR'>
                 <div className='score-container'>
                     <div className='score'><strong>Score:{score}</strong> </div>
@@ -108,6 +114,7 @@ const MemoryGameKO = () => {
                 </div>
                 {gameOver && <GameOver setTries={setTries} tries={tries} setGameOver={setGameOver} />}
             </div>
+            <Link to={'/SelecGamKOSin'} style={{ visibility: gameOver ? 'visible' : 'hidden' }} ><button className='memory_continue'>{t("Games.BtnNext")}</button></Link>
         </div>
     );
 }

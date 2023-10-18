@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Officialpage from './components/Officialpage';
-import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
+// import Sectionnumbers from './components/JuegoNumManoVideo/Sectionnumbers';
 import Jugadores from './components/Jugadores';
 import PlayerSelector from './components/PlayerSelector';
 
@@ -206,7 +206,7 @@ useEffect(() => {
             <Route path="/SelecGamGlobal" element={< SelecGamGlobal />} />
             {/*Seleccionar SIN AYUDA 1jug o 2jug*/}
             <Route path="/SelecGamNumSin" element={< SelecGamNumSin />} />
-            <Route path="/SelecGam0Sin4" element={< SelecGam04Sin />} />
+            <Route path="/SelecGam04Sin" element={< SelecGam04Sin />} />
             <Route path="/SelecGam59Sin" element={< SelecGam59Sin />} />
             <Route path="/SelecGamVocalesSin" element={< SelecGamVocalesSin />} />
             <Route path="/SelecGamAESin" element={< SelecGamAESin />} />
@@ -280,7 +280,7 @@ useEffect(() => {
 
           
           
-          <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> {/* Donde se ve Juego Num */}
+          {/* <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> Donde se ve Juego Num */}
 
           {/* <Route path='/Jugadores' element={<Jugadores />} />  */}
           <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
