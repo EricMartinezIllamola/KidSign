@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import five from '../../assets/numbers/five.png';
 import fivesign from '../../assets/numbers/fivesign.png';
 import six from '../../assets/numbers/six.png';
@@ -12,14 +12,20 @@ import ninesign from '../../assets/numbers/ninesign.png';
 import uk from '../../assets/uk.png';
 import spain from '../../assets/spain.png';
 import arrowD from '../../assets/arrowD.png'
-import '../../styles/App.css';
+import "../../styles/Lecciones.css";
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Sectionnumber59 = () => {
+
+    const [t, i18n] = useTranslation("games"); //traduccion
 
     const [visibleIndex, setVisibleIndex] = useState(0);
     const [utterance, setUtterance] = useState(null);
     const [utterance2, setUtterance2] = useState(null);
-//audio y poner funcion en cada boton
+    const [end, setEnd] = useState(false);
+
+    //audio y poner funcion en cada boton
     const handlePlay_es = () => {
         const synth = window.speechSynthesis;
         synth.speak(utterance);
@@ -29,7 +35,7 @@ const Sectionnumber59 = () => {
         const synth = window.speechSynthesis;
         synth.speak(utterance2);
     };
-//
+    //
 
     const switchVisible = () => {
         // Calculate the index of the next div to show
@@ -50,7 +56,7 @@ const Sectionnumber59 = () => {
             synth.cancel();
         };
     }, [visibleIndex]);
-//fin
+    //fin
     const convertirvocales =
     {
         0: { name: "5" },
@@ -60,39 +66,54 @@ const Sectionnumber59 = () => {
         4: { name: "9" },
     }
 
+    useEffect(() => {
+        if (visibleIndex === 4) {
+            setEnd(true);
+        }
+    }, [visibleIndex])
+
     return (
-        <div className='section-numbers' id='numbers'>
+        <div className='lecciones_container'>
 
-            <div className='A-Z' style={{ display: visibleIndex === 0 ? 'flex' : 'none' }}>
-                <div> <img src={five} alt='' id='five' /></div>
-                <div><img src={fivesign} alt='' id='fivesign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 1 ? 'flex' : 'none' }}>
-                <div><img src={six} alt='' id='six' /></div>
-                <div><img src={sixsign} alt='' id='sixsign' /></div>
+            <div className='section_up section_num'>
+                <img src={uk} alt='' id='uk' onClick={() => { handlePlay_en() }} />
+                <img src={spain} alt='' id='spain' onClick={() => { handlePlay_es() }} />
             </div>
 
-            <div className='A-Z' style={{ display: visibleIndex === 2 ? 'flex' : 'none' }}>
-                <div><img src={seven} alt='' id='seven' /></div>
-                <div><img src={sevensign} alt='' id='sevensign' /></div>
+            <div className='section_mid section_num' >
+                <div className='A-Z' style={{ display: visibleIndex === 0 ? 'flex' : 'none' }}>
+                    <div> <img src={five} alt='' id='five' /></div>
+                    <div><img src={fivesign} alt='' id='fivesign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 1 ? 'flex' : 'none' }}>
+                    <div><img src={six} alt='' id='six' /></div>
+                    <div><img src={sixsign} alt='' id='sixsign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 2 ? 'flex' : 'none' }}>
+                    <div><img src={seven} alt='' id='seven' /></div>
+                    <div><img src={sevensign} alt='' id='sevensign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
+                    <div> <img src={eight} alt='' id='eight' /></div>
+                    <div> <img src={eightsign} alt='' id='eightsign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 4 ? 'flex' : 'none' }}>
+                    <div> <img src={nine} alt='' id='nine' /></div>
+                    <div><img src={ninesign} alt='' id='ninesign' /> </div>
+                </div>
+
+                <div className='A-O'>
+                    <input id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />
+                </div>
             </div>
 
-            <div className='A-Z' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
-                <div> <img src={eight} alt='' id='eight' /></div>
-                <div> <img src={eightsign} alt='' id='eightsign' /></div>
-            </div>
-
-            <div className='A-Z' style={{ display: visibleIndex === 4 ? 'flex' : 'none' }}>
-                <div> <img src={nine} alt='' id='nine' /></div>
-                <div><img src={ninesign} alt='' id='ninesign' /> </div>
-            </div>
-            <div className='esengmain'>
-                <div className='eng'> <button onClick={() => { handlePlay_en() }}>  <img src={uk} alt='' id='uk' /></button> </div>
-                <div className='es'> <button onClick={() => { handlePlay_es() }}> <img src={spain} alt='' id='spain' /></button></div>
-            </div>
-            <div className='A-O'>
-                <input id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />
+            <div className='section_down section_num'>
+                <Link to={'/Officialpage'}> <button className='leccion_exit'>{t("Games.BtnExit")}</button></Link>
+                <Link to={'/SelecGam59'} style={{ visibility: end ? 'visible' : 'hidden' }} ><button className='leccion_continue'>{t("Games.BtnNext")}</button></Link>
             </div>
         </div>
     )

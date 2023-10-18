@@ -5,27 +5,27 @@ import GameOver from '../PropMemori/GameOver';
 
 const MemoryGameUZ = () => {
     let arrayofImages = [
-        { num: 1, name: 'U', img: require('../../assets/letters/U.png'), isMatch:false},
-        { num: 2, name: 'V', img: require('../../assets/letters/V.png'), isMatch:false},
-        { num: 3, name: 'W', img: require('../../assets/letters/W.png'), isMatch:false},
-        { num: 4, name: 'X', img: require('../../assets/letters/X.png'), isMatch:false},
-        { num: 5, name: 'Y', img: require('../../assets/letters/Y.png'), isMatch:false},
-        { num: 6, name: 'Z', img: require('../../assets/letters/Z.png'), isMatch:false},
+        { num: 1, name: 'U', img: require('../../assets/letters/U.png'), isMatch: false },
+        { num: 2, name: 'V', img: require('../../assets/letters/V.png'), isMatch: false },
+        { num: 3, name: 'W', img: require('../../assets/letters/W.png'), isMatch: false },
+        { num: 4, name: 'X', img: require('../../assets/letters/X.png'), isMatch: false },
+        { num: 5, name: 'Y', img: require('../../assets/letters/Y.png'), isMatch: false },
+        { num: 6, name: 'Z', img: require('../../assets/letters/Z.png'), isMatch: false },
     ]
 
     let arrayofSigns = [
-        { num: 1, name: 'usign', img: require('../../assets/letterssign/usign.png')},
+        { num: 1, name: 'usign', img: require('../../assets/letterssign/usign.png') },
         { num: 2, name: 'vsign', img: require('../../assets/letterssign/vsign.png') },
         { num: 3, name: 'wsign', img: require('../../assets/letterssign/wsign.png') },
         { num: 4, name: 'xsign', img: require('../../assets/letterssign/xsign.png') },
         { num: 5, name: 'ysign', img: require('../../assets/letterssign/ysign.png') },
-        { num: 6, name: 'zsign', img: require('../../assets/letterssign/zsign.png')},  
+        { num: 6, name: 'zsign', img: require('../../assets/letterssign/zsign.png') },
     ]
 
     const [cards, setCards] = useState([]);
     const [selectedCards, setSelectedCards] = useState([]);
     const [score, setScore] = useState(0);
-    const [tries,setTries] = useState(0);
+    const [tries, setTries] = useState(0);
     const [gameOver, setGameOver] = useState(false);
 
     const shuffleImages = () => {
@@ -33,7 +33,7 @@ const MemoryGameUZ = () => {
         //double array
         let shuffledArray = [...arrayofImages, ...arrayofSigns]
             //add id
-            .map((item, index) => ({...item, id: index + 1 }))
+            .map((item, index) => ({ ...item, id: index + 1 }))
 
             .sort((a, b) => 0.5 - Math.random());
         setScore(0)
@@ -43,32 +43,32 @@ const MemoryGameUZ = () => {
 
     useEffect(() => {
         shuffleImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(selectedCards);
-        if(selectedCards.length ===2) {
+        if (selectedCards.length === 2) {
             setTimeout(() => {
                 setSelectedCards([]);
             }, 1000);
             checkMatch();
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedCards]);
 
-    const checkMatch = () =>{
-        if(selectedCards[0].num === selectedCards[1].num){
+    const checkMatch = () => {
+        if (selectedCards[0].num === selectedCards[1].num) {
             // console.log("yay!");
-            setScore(prev=>prev +1)
-            let updatedCards = cards.map((card)=>{
-                if(card.num === selectedCards[0].num){
-                    return{...card, isMatch: true}; 
+            setScore(prev => prev + 1)
+            let updatedCards = cards.map((card) => {
+                if (card.num === selectedCards[0].num) {
+                    return { ...card, isMatch: true };
                 }
                 return card;
             });
             setCards(updatedCards);
-        }else{
+        } else {
             // console.log("dont match!");
             setTries((prev) => prev + 1);
         }
@@ -77,22 +77,21 @@ const MemoryGameUZ = () => {
 
     //restart game
 
-    useEffect(() =>{
-        if(score === arrayofImages.length && arrayofSigns.length) {
+    useEffect(() => {
+        if (score === arrayofImages.length && arrayofSigns.length) {
             console.log("game over");
-            setTimeout(() =>{
+            setTimeout(() => {
                 shuffleImages();
                 setGameOver(true);
             }, 1000)
-   
+
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [score, shuffleImages]);
 
 
     return (
-        <>
-
+        <div className='memory_bg memory_bg_alphabet'>
             <div className='containeR'>
                 <div className='score-container'>
                     <div className='score'><strong>Score:{score}</strong> </div>
@@ -109,8 +108,7 @@ const MemoryGameUZ = () => {
                 </div>
                 {gameOver && <GameOver setTries={setTries} tries={tries} setGameOver={setGameOver} />}
             </div>
-
-        </>
+        </div>
     );
 }
 

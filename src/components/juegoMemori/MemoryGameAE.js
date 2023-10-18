@@ -91,21 +91,23 @@ const MemoryGameAE = () => {
 
 
     return (
-        <div className='containeR'>
-            <div className='score-container'>
-                <div className='score'><strong>Score:{score}</strong> </div>
-                <div className='tries'> <strong>Tries {tries}</strong></div>
+        <div className='memory_bg memory_bg_alphabet'>
+            <div className='containeR'>
+                <div className='score-container'>
+                    <div className='score'><strong>Score:{score}</strong> </div>
+                    <div className='tries'> <strong>Tries {tries}</strong></div>
+                </div>
+                <div className='cards-container1'>
+                    {cards.map((arrayofImages) => (
+                        <Card
+                            key={arrayofImages.id}
+                            card={arrayofImages}
+                            setSelectedCards={setSelectedCards}
+                            selectedCards={selectedCards} />
+                    ))}
+                </div>
+                {gameOver && <GameOver setTries={setTries} tries={tries} setGameOver={setGameOver} />}
             </div>
-            <div className='cards-container1'>
-                {cards.map((arrayofImages) => (
-                    <Card
-                        key={arrayofImages.id}
-                        card={arrayofImages}
-                        setSelectedCards={setSelectedCards}
-                        selectedCards={selectedCards} />
-                ))}
-            </div>
-            {gameOver && <GameOver setTries={setTries} tries={tries} setGameOver={setGameOver} />}
         </div>
     );
 }

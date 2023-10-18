@@ -5,27 +5,27 @@ import GameOver from '../PropMemori/GameOver';
 
 const MemoryGamenum69 = () => {
     let arrayofImages = [
-        { num: 1, name: 'five', img: require('../../assets/numbers/five.png'), isMatch:false},
-        { num: 2, name: 'six', img: require('../../assets/numbers/six.png'), isMatch:false},
-        { num: 3, name: 'seven', img: require('../../assets/numbers/seven.png'), isMatch:false},
-        { num: 4, name: 'eight', img: require('../../assets/numbers/eight.png'), isMatch:false},
-        { num: 5, name: 'nine', img: require('../../assets/numbers/nine.png'), isMatch:false},
-        { num: 6, name: 'monosonriente', img: require('../../assets/monosonriente.png'), isMatch:false},
+        { num: 1, name: 'five', img: require('../../assets/numbers/five.png'), isMatch: false },
+        { num: 2, name: 'six', img: require('../../assets/numbers/six.png'), isMatch: false },
+        { num: 3, name: 'seven', img: require('../../assets/numbers/seven.png'), isMatch: false },
+        { num: 4, name: 'eight', img: require('../../assets/numbers/eight.png'), isMatch: false },
+        { num: 5, name: 'nine', img: require('../../assets/numbers/nine.png'), isMatch: false },
+        { num: 6, name: 'monosonriente', img: require('../../assets/monosonriente.png'), isMatch: false },
     ]
 
     let arrayofSigns = [
-        { num: 1, name: 'fivesign', img: require('../../assets/numbers/fivesign.png')},
+        { num: 1, name: 'fivesign', img: require('../../assets/numbers/fivesign.png') },
         { num: 2, name: 'sixsign', img: require('../../assets/numbers/sixsign.png') },
         { num: 3, name: 'sevensign', img: require('../../assets/numbers/sevensign.png') },
         { num: 4, name: 'eightsign', img: require('../../assets/numbers/eightsign.png') },
         { num: 5, name: 'ninesign', img: require('../../assets/numbers/ninesign.png') },
-        { num: 6, name: 'monosonriente', img: require('../../assets/monosonriente.png')},  
+        { num: 6, name: 'monosonriente', img: require('../../assets/monosonriente.png') },
     ]
 
     const [cards, setCards] = useState([]);
     const [selectedCards, setSelectedCards] = useState([]);
     const [score, setScore] = useState(0);
-    const [tries,setTries] = useState(0);
+    const [tries, setTries] = useState(0);
     const [gameOver, setGameOver] = useState(false);
 
     const shuffleImages = () => {
@@ -33,7 +33,7 @@ const MemoryGamenum69 = () => {
         //double array
         let shuffledArray = [...arrayofImages, ...arrayofSigns]
             //add id
-            .map((item, index) => ({...item, id: index + 1 }))
+            .map((item, index) => ({ ...item, id: index + 1 }))
 
             .sort((a, b) => 0.5 - Math.random());
         setScore(0)
@@ -43,32 +43,32 @@ const MemoryGamenum69 = () => {
 
     useEffect(() => {
         shuffleImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(selectedCards);
-        if(selectedCards.length ===2) {
+        if (selectedCards.length === 2) {
             setTimeout(() => {
                 setSelectedCards([]);
             }, 1000);
             checkMatch();
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedCards]);
 
-    const checkMatch = () =>{
-        if(selectedCards[0].num === selectedCards[1].num){
+    const checkMatch = () => {
+        if (selectedCards[0].num === selectedCards[1].num) {
             // console.log("yay!");
-            setScore(prev=>prev +1)
-            let updatedCards = cards.map((card)=>{
-                if(card.num === selectedCards[0].num){
-                    return{...card, isMatch: true}; 
+            setScore(prev => prev + 1)
+            let updatedCards = cards.map((card) => {
+                if (card.num === selectedCards[0].num) {
+                    return { ...card, isMatch: true };
                 }
                 return card;
             });
             setCards(updatedCards);
-        }else{
+        } else {
             // console.log("dont match!");
             setTries((prev) => prev + 1);
         }
@@ -77,22 +77,21 @@ const MemoryGamenum69 = () => {
 
     //restart game
 
-    useEffect(() =>{
-        if(score === arrayofImages.length && arrayofSigns.length) {
+    useEffect(() => {
+        if (score === arrayofImages.length && arrayofSigns.length) {
             console.log("game over");
-            setTimeout(() =>{
+            setTimeout(() => {
                 shuffleImages();
                 setGameOver(true);
             }, 1000)
-   
+
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [score, shuffleImages]);
 
 
     return (
-        <>
-
+        <div className='memory_bg memory_bg_numbers'>
             <div className='containeR'>
                 <div className='score-container'>
                     <div className='score'><strong>Score:{score}</strong> </div>
@@ -109,8 +108,7 @@ const MemoryGamenum69 = () => {
                 </div>
                 {gameOver && <GameOver setTries={setTries} tries={tries} setGameOver={setGameOver} />}
             </div>
-
-        </>
+        </div>
     );
 }
 

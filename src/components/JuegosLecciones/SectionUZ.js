@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import U from '../../assets/letters/U.png';
 import usign from '../../assets/letterssign/usign.png';
 import V from '../../assets/letters/V.png';
@@ -14,13 +14,20 @@ import zsign from '../../assets/letterssign/zsign.png';
 import uk from '../../assets/uk.png';
 import spain from '../../assets/spain.png';
 import arrowD from '../../assets/arrowD.png';
-import "../../styles/App.css";
+import "../../styles/Lecciones.css";
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const SectionUZ = () => {
+
+    const [t, i18n] = useTranslation("games"); //traduccion
+
     const [visibleIndex, setVisibleIndex] = useState(0);
     const [utterance, setUtterance] = useState(null);
     const [utterance2, setUtterance2] = useState(null);
-//audio y poner funcion en cada boton
+    const [end, setEnd] = useState(false);
+
+    //audio y poner funcion en cada boton
     const handlePlay_es = () => {
         const synth = window.speechSynthesis;
         synth.speak(utterance);
@@ -30,12 +37,12 @@ const SectionUZ = () => {
         const synth = window.speechSynthesis;
         synth.speak(utterance2);
     };
-//
+    //
 
     const switchVisible = () => {
         // Calculate the index of the next div to show
         const nextIndex = (visibleIndex + 1) % 6;
-        setVisibleIndex(nextIndex) 
+        setVisibleIndex(nextIndex)
     };
 
     // audio usestate
@@ -51,7 +58,7 @@ const SectionUZ = () => {
             synth.cancel();
         };
     }, [visibleIndex]);
-//fin
+    //fin
     const convertirvocales =
     {
         0: { name: "u" },
@@ -59,47 +66,66 @@ const SectionUZ = () => {
         2: { name: "w" },
         3: { name: "x" },
         4: { name: "y" },
+        5: { name: "z" },
     }
 
-  return (
-    <div className='section-container'>
-            <div className='esengmain'>
-                <div className='eng'> <button onClick={() => { handlePlay_en() }}>  <img src={uk} alt='' id='uk' /></button> </div>
-                <div className='es'> <button onClick={() => { handlePlay_es() }}> <img src={spain} alt='' id='spain' /></button></div>
+    useEffect(() => {
+        if (visibleIndex === 5) {
+            setEnd(true);
+        }
+    }, [visibleIndex])
+
+    return (
+        <div className='lecciones_container'>
+
+            <div className='section_up section_alphabet'>
+                <img src={uk} alt='' id='uk' onClick={() => { handlePlay_en() }} />
+                <img src={spain} alt='' id='spain' onClick={() => { handlePlay_es() }} />
             </div>
-    <div className='A-Z' style={{ display: visibleIndex === 0 ? 'flex' : 'none' }}>
-        <div className='vocals'> <img src={U} alt='' id='U' /></div>
-        <div className='vocals'> <img src={usign} alt='' id='usign' /></div>
-    </div>
 
-    <div className='A-Z' style={{ display: visibleIndex === 1 ? 'flex' : 'none' }}>
-        <div className='vocals'> <img src={V} alt='' id='V' /></div>
-        <div className='vocals'><img src={vsign} alt='' id='vsign' /></div>
-    </div>
+            <div className='section_mid section_alphabet' >
 
-    <div className='A-Z' style={{ display: visibleIndex === 2 ? 'flex' : 'none' }}>
-        <div className='vocals'><img src={W} alt='' id='W' /></div>
-        <div className='vocals'><img src={wsign} alt='' id='wsign' /></div>
-    </div>
+                <div className='A-Z' style={{ display: visibleIndex === 0 ? 'flex' : 'none' }}>
+                    <div className='vocals'> <img src={U} alt='' id='U' /></div>
+                    <div className='vocals'> <img src={usign} alt='' id='usign' /></div>
+                </div>
 
-    <div className='A-Z' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
-        <div className='vocals'> <img src={X} alt='' id='X' /></div>
-        <div className='vocals'> <img src={xsign} alt='' id='xsign' /></div>
-    </div>
-    <div className='A-Z' style={{ display: visibleIndex === 4 ? 'flex' : 'none' }}>
-        <div className='vocals'><img src={Y} alt='' id='Y' /></div>
-        <div className='vocals'><img src={ysign} alt='' id='ysign' /></div>
-    </div>
-          <div className='A-Z' style={{ display: visibleIndex === 5 ? 'flex' : 'none' }}>
-              <div> <img src={Z} alt='Z' id='Z' /></div>
-              <div><img src={zsign} alt='zsign' id='zsign' /></div>
-          </div>
-    <div className='A-O'>
-        <input className='vocals' id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />
-    </div>
-</div>
+                <div className='A-Z' style={{ display: visibleIndex === 1 ? 'flex' : 'none' }}>
+                    <div className='vocals'> <img src={V} alt='' id='V' /></div>
+                    <div className='vocals'><img src={vsign} alt='' id='vsign' /></div>
+                </div>
 
-  )
+                <div className='A-Z' style={{ display: visibleIndex === 2 ? 'flex' : 'none' }}>
+                    <div className='vocals'><img src={W} alt='' id='W' /></div>
+                    <div className='vocals'><img src={wsign} alt='' id='wsign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 3 ? 'flex' : 'none' }}>
+                    <div className='vocals'> <img src={X} alt='' id='X' /></div>
+                    <div className='vocals'> <img src={xsign} alt='' id='xsign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 4 ? 'flex' : 'none' }}>
+                    <div className='vocals'><img src={Y} alt='' id='Y' /></div>
+                    <div className='vocals'><img src={ysign} alt='' id='ysign' /></div>
+                </div>
+
+                <div className='A-Z' style={{ display: visibleIndex === 5 ? 'flex' : 'none' }}>
+                    <div className='vocals'> <img src={Z} alt='' id='Z' /></div>
+                    <div className='vocals'><img src={zsign} alt='' id='zsign' /></div>
+                </div>
+
+                <div className='A-O'>
+                    <input id="Button1" type="image" src={arrowD} alt='' onClick={switchVisible} />
+                </div>
+            </div>
+
+            <div className='section_down section_alphabet'>
+                <Link to={'/Officialpage'}> <button className='leccion_exit'>{t("Games.BtnExit")}</button></Link>
+                <Link to={'/SelecGamUZ'} style={{ visibility: end ? 'visible' : 'hidden' }} ><button className='leccion_continue'>{t("Games.BtnNext")}</button></Link>
+            </div>
+        </div >
+    )
 }
 
 export default SectionUZ;

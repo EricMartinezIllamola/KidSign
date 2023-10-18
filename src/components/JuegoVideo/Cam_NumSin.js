@@ -42,7 +42,7 @@ function App() {
   useEffect(() => {
     const runModel = async () => {
       // const num_model_04 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-04/main/model.json";
-      const num_model_06 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-06-B/main/model.json";
+      const num_model_06 = "https://raw.githubusercontent.com/EricMartinezIllamola/num-model-06/main/model.json";
 
       const model = await tf.loadGraphModel(num_model_06);
       console.log("Model loaded.");

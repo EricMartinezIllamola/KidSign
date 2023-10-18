@@ -91,7 +91,7 @@ const MemoryGameVocales = () => {
 
 
     return (
-        <div className='memory_bg'>
+        <div className='memory_bg memory_bg_vocales'>
             <div className='containeR'>
                 <div className='score-container'>
                     <div className='score'><strong>Score:{score}</strong> </div>
