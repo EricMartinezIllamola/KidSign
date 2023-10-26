@@ -49,7 +49,7 @@ const SectionUZ = () => {
     useEffect(() => {
         const synth = window.speechSynthesis;
         const es = new SpeechSynthesisUtterance(convertirvocales[visibleIndex]['name']);
-        es.lang = "es-ES";
+        es.lang = "es-US";
         setUtterance(es);
         const en = new SpeechSynthesisUtterance(convertirvocales[visibleIndex]['name']);
         en.lang = "en-US";

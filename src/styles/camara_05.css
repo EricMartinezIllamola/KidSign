@@ -85,6 +85,7 @@
 
 .left_side .left_center {
   height: 55vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items:center;
@@ -93,6 +94,7 @@
 
 .img_ejemplo {
   height: 45vh;
+  max-width: 50%;
   object-fit: contain;
 }
 

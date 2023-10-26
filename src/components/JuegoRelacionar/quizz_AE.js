@@ -71,14 +71,14 @@
                         <div><p>{t("Games.Puntos") + points}</p></div>
                         <div><p>{t("Games.Ronda") + partidas + "/5"}</p></div>
                     </div>
-                    <img className="quizz_num" src={require("../../assets/imgquizzglobal/" + referencia + ".png")}></img>
-                    <img className={end ? "quizz_mono quizz_mono_salta" : "quizz_mono"} src={require("../../assets/mascots/monosentado.png")}></img>
+                    <img className="quizz_num" src={require("../../assets/imgquizzglobal/" + referencia + ".png")} alt=""></img>
+                    <img className={end ? "quizz_mono quizz_mono_salta" : "quizz_mono"} src={require("../../assets/mascots/monosentado.png")} alt=""></img>
                 </div>
                 <div className="quizz_down">
                     <Link to={'/Officialpage'} className={end? "quizz_link show" : "quizz_link"}><button className={end? "quizz_exit show" : "quizz_exit"}>{t("Games.BtnExit")}</button></Link>
-                    <button onClick={() => { comprobar(s1) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s1 + "B.png")}></img></button>
-                    <button onClick={() => { comprobar(s2) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s2 + "B.png")}></img></button>
-                    <button onClick={() => { comprobar(s3) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s3 + "B.png")}></img></button>
+                    <button onClick={() => { comprobar(s1) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s1 + "B.png")} alt=""></img></button>
+                    <button onClick={() => { comprobar(s2) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s2 + "B.png")} alt=""></img></button>
+                    <button onClick={() => { comprobar(s3) }} className="quizz_cards"><img className="quizz_numB" src={require("../../assets/imgquizzglobal/" + s3 + "B.png")} alt=""></img></button>
                     <Link to={'/MemoryGameAE'} className={end? "quizz_link show" : "quizz_link"}><button className={end? "quizz_continue show" : "quizz_continue"}>{t("Games.BtnNext")}</button></Link>
                 </div>
                 <div className="quizz_expand"></div>

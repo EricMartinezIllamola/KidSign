@@ -24,10 +24,11 @@ function App() {
 
   const numArray = [0, 4, 8, 13, 19];
   const [referencia, setReferencia] = useState(randomElement(numArray));
-  let [results, setResults] = useState([]);
+  const [results, setResults] = useState([]);
   const [points, setPoints] = useState(0);
   const [timer, setTimer] = useState(90);
 
+  const [change, setChange] = useState(false);
   const [start, setStart] = useState(false);
   const [end, setEnd] = useState(false);
 
@@ -113,9 +114,9 @@ function App() {
             const expanded = resized.expandDims(0)
             const obj = await model.execute(expanded)
             const predictedValue = argMax(obj.arraySync()[0]);
-            results.push(predictedValue);
+
+            setResults(results.push(predictedValue));
             setResults(results.slice(-10));
-            results = results.slice(-10);
 
             const drawRect = (predictedValue, ctx, x, y, width, height) => {
               // Set styling
@@ -153,6 +154,7 @@ function App() {
       if (timer > 0 && start) {
         setPoints(points + 1);
         setReferencia(randomElement(numArray));
+        setChange(!change);
       }
       else if (timer === 0 && start) {
         setReferencia(randomElement(numArray));
@@ -162,6 +164,15 @@ function App() {
       setEnd(true);
     }
   }, [results]);
+
+  useEffect(() => {
+    if (timer > 0 && start) {
+      const synth = window.speechSynthesis;
+      const en = new SpeechSynthesisUtterance(labelMap[referencia]['name']);
+      en.lang = t("Games.Idioma");
+      synth.speak(en);
+    }
+  }, [change])
 
   useEffect(() => {
     timer > 0 && start && setTimeout(() => setTimer(timer - 1), 1000);
@@ -307,7 +318,7 @@ function App() {
             </div>
           </div>
           <div className="left_start">
-            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)) }}>{t("Games.BtnStart")}</button>
+            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)); setChange(!change); }}>{t("Games.BtnStart")}</button>
             <Link to={"/Officialpage"} className="camara_l_exit"><button className="btn_exit">{t("Games.BtnExit")}</button></Link>
           </div>
         </div>

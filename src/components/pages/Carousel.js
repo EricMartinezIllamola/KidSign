@@ -31,11 +31,11 @@ const App = () => {
     return (
         <div className='carousel_container'>
             <div className='carousel_body'>
-                <img src={SeccionLetras} className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
-                <img src={Juegomano} className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
-                <img src={Juegomemory} className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
-                <img src={Jugadores} className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
-                <img src={Jugadoresdos} className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
+                <img src={SeccionLetras} alt='' className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
+                <img src={Juegomano} alt='' className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
+                <img src={Juegomemory} alt='' className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
+                <img src={Jugadores} alt='' className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
+                <img src={Jugadoresdos} alt='' className='carousel_img' style={{ transform: "translateX(" + position + "px)" }} />
                 <div className="carousel_btn_container">
                     <div onClick={() => { carrousel_btn(0) }} className={position === 0? "carousel_btn carousel_btn_active" : "carousel_btn"}></div>
                     <div onClick={() => { carrousel_btn(-750) }} className={position === -750? "carousel_btn carousel_btn_active" : "carousel_btn"}></div>

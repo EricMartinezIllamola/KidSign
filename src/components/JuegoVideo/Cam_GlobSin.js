@@ -24,10 +24,11 @@ function App() {
 
   const numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33];
   const [referencia, setReferencia] = useState(randomElement(numArray));
-  let [results, setResults] = useState([]);
+  const [results, setResults] = useState([]);
   const [points, setPoints] = useState(0);
   const [timer, setTimer] = useState(90);
 
+  const [change, setChange] = useState(false);
   const [start, setStart] = useState(false);
   const [end, setEnd] = useState(false);
 
@@ -123,9 +124,9 @@ function App() {
             const expanded = resized.expandDims(0)
             const obj = await model.execute(expanded)
             const predictedValue = argMax(obj.arraySync()[0]);
-            results.push(predictedValue);
+
+            setResults(results.push(predictedValue));
             setResults(results.slice(-10));
-            results = results.slice(-10);
 
             const drawRect = (predictedValue, ctx, x, y, width, height) => {
               // Set styling
@@ -163,6 +164,7 @@ function App() {
       if (timer > 0 && start) {
         setPoints(points + 1);
         setReferencia(randomElement(numArray));
+        setChange(!change);
       }
       else if (timer === 0 && start) {
         setReferencia(randomElement(numArray));
@@ -172,6 +174,15 @@ function App() {
       setEnd(true);
     }
   }, [results]);
+
+  useEffect(() => {
+    if (timer > 0 && start) {
+      const synth = window.speechSynthesis;
+      const en = new SpeechSynthesisUtterance(labelMap[referencia]['name']);
+      en.lang = t("Games.Idioma");
+      synth.speak(en);
+    }
+  }, [change])
 
   useEffect(() => {
     timer > 0 && start && setTimeout(() => setTimer(timer - 1), 1000);
@@ -234,7 +245,7 @@ function App() {
         />
         <div className="left_side">
           <div className="left_up">
-            <div className="left_up_mono"><img className={end? "camara_mono camara_mono_salta" : "camara_mono"} src={require("../../assets/mascots/monohojas.png")}></img></div>
+            <div className="left_up_mono"><img className={end ? "camara_mono camara_mono_salta" : "camara_mono"} src={require("../../assets/mascots/monohojas.png")}></img></div>
             <div className="left_up_points">
               <div><p className="timer">{timer < 10 ? t("Games.Tiempo0") + timer : t("Games.Tiempo") + timer}</p></div>
               <div><p className="points">{t("Games.Puntos") + points}</p></div>
@@ -248,7 +259,7 @@ function App() {
           <Link to={"/Officialpage"} className="camara_l_exit"><button className="camara_exit" onClick={() => { }}>{t("Games.BtnExit")}</button></Link>
         </div>
         <div className="camara_extend"></div>
-        
+
       </div>
     );
   }
@@ -259,7 +270,7 @@ function App() {
         <Webcam
           className="web"
           ref={webcamRef}
-          muted={true} 
+          muted={true}
           style={{
             position: "absolute",
             marginLeft: "auto",
@@ -310,12 +321,12 @@ function App() {
           <div className="left_up">
             <div className="left_up_mono"><img className="camara_mono" src={require("../../assets/mascots/monohojas.png")}></img></div>
             <div className="left_up_points">
-            <div><p className="timer">{timer < 10 ? t("Games.Tiempo0") + timer : t("Games.Tiempo") + timer}</p></div>
+              <div><p className="timer">{timer < 10 ? t("Games.Tiempo0") + timer : t("Games.Tiempo") + timer}</p></div>
               <div><p className="points">{t("Games.Puntos") + points}</p></div>
             </div>
           </div>
           <div className="left_start">
-            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)) }}>{t("Games.BtnStart")}</button>
+            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)); setChange(!change); }}>{t("Games.BtnStart")}</button>
             <Link to={"/Officialpage"} className="camara_l_exit"><button className="btn_exit">{t("Games.BtnExit")}</button></Link>
           </div>
         </div>

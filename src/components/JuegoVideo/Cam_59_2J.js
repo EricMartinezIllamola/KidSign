@@ -26,12 +26,13 @@ function App() {
 
   const numArray = [5, 6, 7, 8, 9];
   const [referencia, setReferencia] = useState(randomElement(numArray));
-  let [results, setResults] = useState([]);
-  let [results2, setResults2] = useState([]);
+  const [results, setResults] = useState([]);
+  const [results2, setResults2] = useState([]);
   const [points, setPoints] = useState(0);
   const [points2, setPoints2] = useState(0);
   const [timer, setTimer] = useState(90);
 
+  const [change, setChange] = useState(false);
   const [start, setStart] = useState(false);
   const [end, setEnd] = useState(false);
 
@@ -42,6 +43,19 @@ function App() {
   const [y2, setY2] = useState(25);
   const [width, setWidth] = useState(240);
   const [height, setHeight] = useState(240);
+
+  const labelMap = {
+    0: { name: '0', color: 'purple' },
+    1: { name: '1', color: 'red' },
+    2: { name: '2', color: 'yellow' },
+    3: { name: '3', color: 'lime' },
+    4: { name: '4', color: 'blue' },
+    5: { name: '5', color: 'orange' },
+    6: { name: '6', color: 'black' },
+    7: { name: '7', color: 'white' },
+    8: { name: '8', color: 'darkred' },
+    9: { name: '9', color: 'darkblue' },
+  }
 
   // Main function
 
@@ -95,9 +109,9 @@ function App() {
             const expanded = resized.expandDims(0)
             const obj = await model.execute(expanded)
             const predictedValue = argMax(obj.arraySync()[0]);
-            results.push(predictedValue);
+
+            setResults(results.push(predictedValue));
             setResults(results.slice(-10));
-            results = results.slice(-10);
 
             const canvas3 = document.getElementById("canvas3");
 
@@ -111,24 +125,11 @@ function App() {
             const expanded2 = resized2.expandDims(0)
             const obj2 = await model.execute(expanded2)
             const predictedValue2 = argMax(obj2.arraySync()[0]);
-            results2.push(predictedValue2);
+
+            setResults2(results2.push(predictedValue2));
             setResults2(results2.slice(-10));
-            results2 = results2.slice(-10);
 
             // Draw Cuadrado y Results
-            const labelMap = {
-              0: { name: '0', color: 'purple' },
-              1: { name: '1', color: 'red' },
-              2: { name: '2', color: 'yellow' },
-              3: { name: '3', color: 'lime' },
-              4: { name: '4', color: 'blue' },
-              5: { name: '5', color: 'orange' },
-              6: { name: '6', color: 'black' },
-              7: { name: '7', color: 'white' },
-              8: { name: '8', color: 'darkred' },
-              9: { name: '9', color: 'darkblue' },
-            }
-
             const drawRect = (predictedValue, predictedValue2, ctx2, ctx4, x, x2, y, y2, width, height) => {
               // Set styling
               ctx2.strokeStyle = labelMap[predictedValue]['color']
@@ -185,6 +186,7 @@ function App() {
       if (timer > 0 && start) {
         setPoints(points + 1);
         setReferencia(randomElement(numArray));
+        setChange(!change);
       }
       else if (timer === 0 && start) {
         setReferencia(randomElement(numArray));
@@ -201,6 +203,7 @@ function App() {
       if (timer > 0 && start) {
         setPoints2(points2 + 1);
         setReferencia(randomElement(numArray));
+        setChange(!change);
       }
       else if (timer === 0 && start) {
         setReferencia(randomElement(numArray));
@@ -210,6 +213,15 @@ function App() {
       setEnd(true);
     }
   }, [results2]);
+
+  useEffect(() => {
+    if (timer > 0 && start) {
+      const synth = window.speechSynthesis;
+      const en = new SpeechSynthesisUtterance(labelMap[referencia]['name']);
+      en.lang = t("Games.Idioma");
+      synth.speak(en);
+    }
+  }, [change])
 
   useEffect(() => {
     timer > 0 && start && setTimeout(() => setTimer(timer - 1), 1000);
@@ -424,7 +436,7 @@ function App() {
             </div>
           </div>
           <div className="left_start">
-            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)) }}>{t("Games.BtnStart")}</button>
+            <button className="btn_start" onClick={() => { setStart(!start); setTimer(timer + 1); setReferencia(randomElement(numArray)); setChange(!change); }}>{t("Games.BtnStart")}</button>
             <Link to={"/Officialpage"} className="camara_l_exit"><button className="btn_exit">{t("Games.BtnExit")}</button></Link>
           </div>
         </div>

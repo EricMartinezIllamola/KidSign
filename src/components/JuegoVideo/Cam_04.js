@@ -24,7 +24,7 @@ function App() {
 
   const numArray = [0, 1, 2, 3, 4];
   const [referencia, setReferencia] = useState(randomElement(numArray));
-  let [results, setResults] = useState([]);
+  const [results, setResults] = useState([]);
   const [points, setPoints] = useState(0);
   const [timer, setTimer] = useState(90);
 
@@ -100,25 +100,11 @@ function App() {
             const expanded = resized.expandDims(0)
             const obj = await model.execute(expanded)
             const predictedValue = argMax(obj.arraySync()[0]);
-            // results.push(predictedValue);
+
             setResults(results.push(predictedValue));
             setResults(results.slice(-10));
-            // results = results.slice(-10);
 
             // Draw Cuadrado y Results
-            // const labelMap = {
-            //   0: { name: '0', color: 'purple' },
-            //   1: { name: '1', color: 'red' },
-            //   2: { name: '2', color: 'yellow' },
-            //   3: { name: '3', color: 'lime' },
-            //   4: { name: '4', color: 'blue' },
-            //   5: { name: '5', color: 'orange' },
-            //   6: { name: '6', color: 'black' },
-            //   7: { name: '7', color: 'white' },
-            //   8: { name: '8', color: 'darkred' },
-            //   9: { name: '9', color: 'darkblue' },
-            // }
-
             const drawRect = (predictedValue, ctx, x, y, width, height) => {
               // Set styling
               ctx.strokeStyle = labelMap[predictedValue]['color']
@@ -151,7 +137,7 @@ function App() {
 
   useEffect(() => {
     if (results.filter(x => x === referencia).length === 7) {
-      setResults([]);
+      // setResults([]);
       if (timer > 0 && start) {
         setPoints(points + 1);
         setReferencia(randomElement(numArray));
@@ -170,7 +156,7 @@ function App() {
     if (timer > 0 && start) {
       const synth = window.speechSynthesis;
       const en = new SpeechSynthesisUtterance(labelMap[referencia]['name']);
-      en.lang = "en-EN";
+      en.lang = t("Games.Idioma");
       synth.speak(en);
     }
   }, [change])

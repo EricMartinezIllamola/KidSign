@@ -47,7 +47,7 @@ const SectionAE = () => {
     useEffect(() => {
         const synth = window.speechSynthesis;
         const es = new SpeechSynthesisUtterance(convertirae[visibleIndex]['name']);
-        es.lang = "es-ES";
+        es.lang = "es-US";
         setUtterance(es);
         const en = new SpeechSynthesisUtterance(convertirae[visibleIndex]['name']);
         en.lang = "en-US";
