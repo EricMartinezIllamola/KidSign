@@ -18,13 +18,13 @@ const Officialpage = () => {
       <div className='Sidebar'>
         <ul className="sidecss menu bg-base-100 h-full .w-70 rounded-box fixed ">
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
-            <Link to='/'>
+            <Link to='/KidSign/'>
             <img src={casa} alt="casa" id='casa'/>
           <strong className='homeli'>HOME</strong>
             </Link>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
-            <Link to='/Jugadores'>
+            <Link to='/KidSign/Jugadores'>
               <img src={mujer} alt='' id='mujer' />
               <strong className='profileli'>PROFILE</strong>
             </Link>

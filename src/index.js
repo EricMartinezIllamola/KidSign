@@ -54,7 +54,7 @@ return (
   <Auth0Provider
     domain={'dev-lgz8outtbace26ob.us.auth0.com'}
     clientId={'TegxGvtner76ZD8hAbJwxaBZe5rf7e1T'}
-    authorizationParams={{ redirect_uri: 'https://localhost:3000/Jugadores'}}
+    authorizationParams={{ redirect_uri: 'https://ericmartinezillamola.github.io/KidSign/Jugadores'}}
   >
     <App />
   </Auth0Provider>

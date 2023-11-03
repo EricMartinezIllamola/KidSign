@@ -11,7 +11,7 @@ const AuthenticationButton = () => {
   const [t, i18n] = useTranslation("main"); //traduccion
 
   return isAuthenticated ? (
-    <button className="ButtonLogin" onClick={() => logout({ returnTo: "https://localhost:3000/" } ) }>
+    <button className="ButtonLogin" onClick={() => logout({ returnTo: "https://ericmartinezillamola.github.io/KidSign" } ) }>
       <CgProfile/>LogOut
       {/* {t("Navbar.Logout")} */}
     </button>

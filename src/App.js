@@ -284,12 +284,12 @@ useEffect(() => {
 
           {/* <Route path='/Jugadores' element={<Jugadores />} />  */}
           <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
-          <Route path='/' element={<PlayerSelector />} /> {/* Donde se ve */}
+          <Route path='/KidSign' element={<PlayerSelector />} /> {/* Donde se ve */}
 
           {isAuthenticated ? (
-            <Route path='/Jugadores' element={<Jugadores />} /> 
+            <Route path='/KidSign/Jugadores' element={<Jugadores />} /> 
           ) : (
-            <Route path="/" element={<Main />} /> 
+            <Route path="/KidSign" element={<Main />} /> 
           )}
         </Routes>
       </BrowserRouter> 
