@@ -162,16 +162,16 @@ useEffect(() => {
       <BrowserRouter>
         <Routes>
           <Route path="/KidSign" element={<Main />} /> {/* Donde se ve */}
-          <Route path="/Officialpage" element={<Officialpage />} /> {/* Donde se ve los botones para jugar*/}
+          <Route path="/KidSign/Officialpage" element={<Officialpage />} /> {/* Donde se ve los botones para jugar*/}
           {/*Juegos Leccion*/}
-            <Route path="/Section1" element={< Section1/>} />
-            <Route path="/SectionAE" element={< SectionAE/>} />
-            <Route path="/SectionFJ" element={< SectionFJ />} />
-            <Route path="/SectionKO" element={< SectionKO />} />
-            <Route path="/SectionPT" element={< SectionPT />} />
-            <Route path="/SectionUZ" element={< SectionUZ />} />
-            <Route path="/Sectionnumber04" element={< Sectionnumber04 />} />
-            <Route path="/Sectionnumber59" element={< Sectionnumber59 />} />
+            <Route path="/KidSign/Section1" element={< Section1/>} />
+            <Route path="/KidSign/SectionAE" element={< SectionAE/>} />
+            <Route path="/KidSign/SectionFJ" element={< SectionFJ />} />
+            <Route path="/KidSign/SectionKO" element={< SectionKO />} />
+            <Route path="/KidSign/SectionPT" element={< SectionPT />} />
+            <Route path="/KidSign/SectionUZ" element={< SectionUZ />} />
+            <Route path="/KidSign/Sectionnumber04" element={< Sectionnumber04 />} />
+            <Route path="/KidSign/Sectionnumber59" element={< Sectionnumber59 />} />
 
             {/* <Route path="/Quizz59" element={< Quizz59 />} />
             <Route path="/QuizzNums" element={< QuizzNums />} />
@@ -180,110 +180,110 @@ useEffect(() => {
 
 
             {/*Juegos relacionar*/}
-            <Route path="/QuizzVocales" element={< QuizzVocales />} />
-            <Route path="/QuizzAE" element={< QuizzAE />} />
-            <Route path="/QuizzFJ" element={< QuizzFJ />} />
-            <Route path="/QuizzKO" element={< QuizzKO />} />
-            <Route path="/QuizzPT" element={< QuizzPT />} />
-            <Route path="/QuizzUZ" element={< QuizzUZ />} />
-            <Route path="/Quizz04" element={< Quizz04 />} />
-            <Route path="/Quizz59" element={< Quizz59 />} />
-            <Route path="/QuizzNums" element={< QuizzNums />} />
-            <Route path="/QuizzAlphabet" element={< QuizzAlphabet />} />
-            <Route path="/QuizzGlobal" element={< QuizzGlobal />} />
+            <Route path="/KidSign/QuizzVocales" element={< QuizzVocales />} />
+            <Route path="/KidSign/QuizzAE" element={< QuizzAE />} />
+            <Route path="/KidSign/QuizzFJ" element={< QuizzFJ />} />
+            <Route path="/KidSign/QuizzKO" element={< QuizzKO />} />
+            <Route path="/KidSign/QuizzPT" element={< QuizzPT />} />
+            <Route path="/KidSign/QuizzUZ" element={< QuizzUZ />} />
+            <Route path="/KidSign/Quizz04" element={< Quizz04 />} />
+            <Route path="/KidSign/Quizz59" element={< Quizz59 />} />
+            <Route path="/KidSign/QuizzNums" element={< QuizzNums />} />
+            <Route path="/KidSign/QuizzAlphabet" element={< QuizzAlphabet />} />
+            <Route path="/KidSign/QuizzGlobal" element={< QuizzGlobal />} />
 
             {/*Seleccionar 1jug o 2jug*/}
-            <Route path="/SelecGamNum" element={< SelecGamNum />} />
-            <Route path="/SelecGam04" element={< SelecGam04 />} />
-            <Route path="/SelecGam59" element={< SelecGam59 />} />
-            <Route path="/SelecGamVocales" element={< SelecGamVocales />} />
-            <Route path="/SelecGamAE" element={< SelecGamAE />} />
-            <Route path="/SelecGamFJ" element={< SelecGamFJ />} />
-            <Route path="/SelecGamKO" element={< SelecGamKO />} />
-            <Route path="/SelecGamPT" element={< SelecGamPT />} />
-            <Route path="/SelecGamUZ" element={< SelecGamUZ />} />
-            <Route path="/SelecGamAlphabet" element={< SelecGamAlphabet />} />
-            <Route path="/SelecGamGlobal" element={< SelecGamGlobal />} />
+            <Route path="/KidSign/SelecGamNum" element={< SelecGamNum />} />
+            <Route path="/KidSign/SelecGam04" element={< SelecGam04 />} />
+            <Route path="/KidSign/SelecGam59" element={< SelecGam59 />} />
+            <Route path="/KidSign/SelecGamVocales" element={< SelecGamVocales />} />
+            <Route path="/KidSign/SelecGamAE" element={< SelecGamAE />} />
+            <Route path="/KidSign/SelecGamFJ" element={< SelecGamFJ />} />
+            <Route path="/KidSign/SelecGamKO" element={< SelecGamKO />} />
+            <Route path="/KidSign/SelecGamPT" element={< SelecGamPT />} />
+            <Route path="/KidSign/SelecGamUZ" element={< SelecGamUZ />} />
+            <Route path="/KidSign/SelecGamAlphabet" element={< SelecGamAlphabet />} />
+            <Route path="/KidSign/SelecGamGlobal" element={< SelecGamGlobal />} />
             {/*Seleccionar SIN AYUDA 1jug o 2jug*/}
-            <Route path="/SelecGamNumSin" element={< SelecGamNumSin />} />
-            <Route path="/SelecGam04Sin" element={< SelecGam04Sin />} />
-            <Route path="/SelecGam59Sin" element={< SelecGam59Sin />} />
-            <Route path="/SelecGamVocalesSin" element={< SelecGamVocalesSin />} />
-            <Route path="/SelecGamAESin" element={< SelecGamAESin />} />
-            <Route path="/SelecGamFJSin" element={< SelecGamFJSin />} />
-            <Route path="/SelecGamKOSin" element={< SelecGamKOSin />} />
-            <Route path="/SelecGamPTSin" element={< SelecGamPTSin />} />
-            <Route path="/SelecGamUZSin" element={< SelecGamUZSin />} />
-            <Route path="/SelecGamAlphabetSin" element={< SelecGamAlphabetSin />} />
-            <Route path="/SelecGamGlobalSin" element={< SelecGamGlobalSin />} />
+            <Route path="/KidSign/SelecGamNumSin" element={< SelecGamNumSin />} />
+            <Route path="/KidSign/SelecGam04Sin" element={< SelecGam04Sin />} />
+            <Route path="/KidSign/SelecGam59Sin" element={< SelecGam59Sin />} />
+            <Route path="/KidSign/SelecGamVocalesSin" element={< SelecGamVocalesSin />} />
+            <Route path="/KidSign/SelecGamAESin" element={< SelecGamAESin />} />
+            <Route path="/KidSign/SelecGamFJSin" element={< SelecGamFJSin />} />
+            <Route path="/KidSign/SelecGamKOSin" element={< SelecGamKOSin />} />
+            <Route path="/KidSign/SelecGamPTSin" element={< SelecGamPTSin />} />
+            <Route path="/KidSign/SelecGamUZSin" element={< SelecGamUZSin />} />
+            <Route path="/KidSign/SelecGamAlphabetSin" element={< SelecGamAlphabetSin />} />
+            <Route path="/KidSign/SelecGamGlobalSin" element={< SelecGamGlobalSin />} />
 
-            <Route path="/MemoryGameAE" element={< MemoryGameAE />} />
-            <Route path="/MemoryGameFJ" element={< MemoryGameFJ />} />
-            <Route path="/MemoryGameKO" element={< MemoryGameKO />} />
-            <Route path="/MemoryGamePT" element={< MemoryGamePT />} />
-            <Route path="/MemoryGameUZ" element={< MemoryGameUZ />} />
-            <Route path="/MemoryGameVocales" element={< MemoryGameVocales />} />
-            <Route path="/MemoryGamenum" element={< MemoryGamenum />} /> 
-            <Route path="/MemoryGamenum69" element={< MemoryGamenum69 />} /> 
-            <Route path="/MemoryGameglobal" element={< MemoryGameglobal />} /> 
+            <Route path="/KidSign/MemoryGameAE" element={< MemoryGameAE />} />
+            <Route path="/KidSign/MemoryGameFJ" element={< MemoryGameFJ />} />
+            <Route path="/KidSign/MemoryGameKO" element={< MemoryGameKO />} />
+            <Route path="/KidSign/MemoryGamePT" element={< MemoryGamePT />} />
+            <Route path="/KidSign/MemoryGameUZ" element={< MemoryGameUZ />} />
+            <Route path="/KidSign/MemoryGameVocales" element={< MemoryGameVocales />} />
+            <Route path="/KidSign/MemoryGamenum" element={< MemoryGamenum />} /> 
+            <Route path="/KidSign/MemoryGamenum69" element={< MemoryGamenum69 />} /> 
+            <Route path="/KidSign/MemoryGameglobal" element={< MemoryGameglobal />} /> 
             {/*NO FUNCIONA DE MOMENTO
              <Route path="/MemoryGamegloballetras" element={< MemoryGamegloballetras />} />  */}
 
 
             {/* Juego Cam 1j y 2j */}
-            <Route path="/Cam_Num" element={< Cam_Num />} />
-            <Route path="/Cam_Num_2J" element={< Cam_Num_2J />} />
-            <Route path="/Cam_04" element={< Cam_04 />} />
-            <Route path="/Cam_04_2J" element={< Cam_04_2J />} />
-            <Route path="/Cam_59" element={< Cam_59 />} />
-            <Route path="/Cam_59_2J" element={< Cam_59_2J />} />
-            <Route path="/Cam_Glob" element={< Cam_Glob />} />
-            <Route path="/Cam_Glob_2J" element={< Cam_Glob_2J />} />
-            <Route path="/Cam_Alphabet" element={< Cam_Alphabet />} />
-            <Route path="/Cam_Alphabet_2J" element={< Cam_Alphabet_2J />} />
-            <Route path="/Cam_Vocales" element={< Cam_Vocales />} />
-            <Route path="/Cam_Vocales_2J" element={< Cam_Vocales_2J />} />
-            <Route path="/Cam_AE" element={< Cam_AE />} />
-            <Route path="/Cam_AE_2J" element={< Cam_AE_2J />} />
-            <Route path="/Cam_FJ" element={< Cam_FJ />} />
-            <Route path="/Cam_FJ_2J" element={< Cam_FJ_2J />} />
-            <Route path="/Cam_KO" element={< Cam_KO />} />
-            <Route path="/Cam_KO_2J" element={< Cam_KO_2J />} />
-            <Route path="/Cam_PT" element={< Cam_PT />} />
-            <Route path="/Cam_PT_2J" element={< Cam_PT_2J />} />
-            <Route path="/Cam_UZ" element={< Cam_UZ />} />
-            <Route path="/Cam_UZ_2J" element={< Cam_UZ_2J />} />
+            <Route path="/KidSign/Cam_Num" element={< Cam_Num />} />
+            <Route path="/KidSign/Cam_Num_2J" element={< Cam_Num_2J />} />
+            <Route path="/KidSign/Cam_04" element={< Cam_04 />} />
+            <Route path="/KidSign/Cam_04_2J" element={< Cam_04_2J />} />
+            <Route path="/KidSign/Cam_59" element={< Cam_59 />} />
+            <Route path="/KidSign/Cam_59_2J" element={< Cam_59_2J />} />
+            <Route path="/KidSign/Cam_Glob" element={< Cam_Glob />} />
+            <Route path="/KidSign/Cam_Glob_2J" element={< Cam_Glob_2J />} />
+            <Route path="/KidSign/Cam_Alphabet" element={< Cam_Alphabet />} />
+            <Route path="/KidSign/Cam_Alphabet_2J" element={< Cam_Alphabet_2J />} />
+            <Route path="/KidSign/Cam_Vocales" element={< Cam_Vocales />} />
+            <Route path="/KidSign/Cam_Vocales_2J" element={< Cam_Vocales_2J />} />
+            <Route path="/KidSign/Cam_AE" element={< Cam_AE />} />
+            <Route path="/KidSign/Cam_AE_2J" element={< Cam_AE_2J />} />
+            <Route path="/KidSign/Cam_FJ" element={< Cam_FJ />} />
+            <Route path="/KidSign/Cam_FJ_2J" element={< Cam_FJ_2J />} />
+            <Route path="/KidSign/Cam_KO" element={< Cam_KO />} />
+            <Route path="/KidSign/Cam_KO_2J" element={< Cam_KO_2J />} />
+            <Route path="/KidSign/Cam_PT" element={< Cam_PT />} />
+            <Route path="/KidSign/Cam_PT_2J" element={< Cam_PT_2J />} />
+            <Route path="/KidSign/Cam_UZ" element={< Cam_UZ />} />
+            <Route path="/KidSign/Cam_UZ_2J" element={< Cam_UZ_2J />} />
 
             {/* Juego Cam 2J 1j y 2j SIN AYUDA*/}
-            <Route path="/Cam_NumSin" element={< Cam_NumSin />} />
-            <Route path="/Cam_NumSin_2J" element={< Cam_NumSin_2J />} />
-            <Route path="/Cam_04Sin" element={< Cam_04Sin />} />
-            <Route path="/Cam_04Sin_2J" element={< Cam_04Sin_2J />} />
-            <Route path="/Cam_59Sin" element={< Cam_59Sin />} />
-            <Route path="/Cam_59Sin_2J" element={< Cam_59Sin_2J />} />
-            <Route path="/Cam_GlobSin" element={< Cam_GlobSin />} />
-            <Route path="/Cam_GlobSin_2J" element={< Cam_GlobSin_2J />} />
-            <Route path="/Cam_AlphabetSin" element={< Cam_AlphabetSin />} />
-            <Route path="/Cam_AlphabetSin_2J" element={< Cam_AlphabetSin_2J />} />
-            <Route path="/Cam_VocalesSin" element={< Cam_VocalesSin />} />
-            <Route path="/Cam_VocalesSin_2J" element={< Cam_VocalesSin_2J />} />
-            <Route path="/Cam_AESin" element={< Cam_AESin />} />
-            <Route path="/Cam_AESin_2J" element={< Cam_AESin_2J />} />
-            <Route path="/Cam_FJSin" element={< Cam_FJSin />} />
-            <Route path="/Cam_FJSin_2J" element={< Cam_FJSin_2J />} />
-            <Route path="/Cam_KOSin" element={< Cam_KOSin />} />
-            <Route path="/Cam_KOSin_2J" element={< Cam_KOSin_2J />} />
-            <Route path="/Cam_PTSin" element={< Cam_PTSin />} />
-            <Route path="/Cam_PTSin_2J" element={< Cam_PTSin_2J />} />
-            <Route path="/Cam_UZSin" element={< Cam_UZSin />} />
-            <Route path="/Cam_UZSin_2J" element={< Cam_UZSin_2J />} />
+            <Route path="/KidSign/Cam_NumSin" element={< Cam_NumSin />} />
+            <Route path="/KidSign/Cam_NumSin_2J" element={< Cam_NumSin_2J />} />
+            <Route path="/KidSign/Cam_04Sin" element={< Cam_04Sin />} />
+            <Route path="/KidSign/Cam_04Sin_2J" element={< Cam_04Sin_2J />} />
+            <Route path="/KidSign/Cam_59Sin" element={< Cam_59Sin />} />
+            <Route path="/KidSign/Cam_59Sin_2J" element={< Cam_59Sin_2J />} />
+            <Route path="/KidSign/Cam_GlobSin" element={< Cam_GlobSin />} />
+            <Route path="/KidSign/Cam_GlobSin_2J" element={< Cam_GlobSin_2J />} />
+            <Route path="/KidSign/Cam_AlphabetSin" element={< Cam_AlphabetSin />} />
+            <Route path="/KidSign/Cam_AlphabetSin_2J" element={< Cam_AlphabetSin_2J />} />
+            <Route path="/KidSign/Cam_VocalesSin" element={< Cam_VocalesSin />} />
+            <Route path="/KidSign/Cam_VocalesSin_2J" element={< Cam_VocalesSin_2J />} />
+            <Route path="/KidSign/Cam_AESin" element={< Cam_AESin />} />
+            <Route path="/KidSign/Cam_AESin_2J" element={< Cam_AESin_2J />} />
+            <Route path="/KidSign/Cam_FJSin" element={< Cam_FJSin />} />
+            <Route path="/KidSign/Cam_FJSin_2J" element={< Cam_FJSin_2J />} />
+            <Route path="/KidSign/Cam_KOSin" element={< Cam_KOSin />} />
+            <Route path="/KidSign/Cam_KOSin_2J" element={< Cam_KOSin_2J />} />
+            <Route path="/KidSign/Cam_PTSin" element={< Cam_PTSin />} />
+            <Route path="/KidSign/Cam_PTSin_2J" element={< Cam_PTSin_2J />} />
+            <Route path="/KidSign/Cam_UZSin" element={< Cam_UZSin />} />
+            <Route path="/KidSign/Cam_UZSin_2J" element={< Cam_UZSin_2J />} />
 
           
           
           {/* <Route path="/Sectionnumbers" element={<Sectionnumbers />} /> Donde se ve Juego Num */}
 
           {/* <Route path='/Jugadores' element={<Jugadores />} />  */}
-          <Route path='/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
+          <Route path='/KidSign/PlayerSelector' element={<PlayerSelector />} /> {/* Donde se ve */}
           <Route path='/KidSign' element={<PlayerSelector />} /> {/* Donde se ve */}
 
           {isAuthenticated ? (
