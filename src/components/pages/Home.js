@@ -1,38 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../../styles/Home.css';
-import verdetrans from '../../assets/Mainimagenes/verdetrans.png';
-
+import KSlogo from '../../assets/Mainimagenes/KSlogo.png';
+import co from '../../assets/co.png';
+import codown from '../../assets/codown.png';
+import ReactTyped from "react-typed";
 
 const Home = () => {
-
-  const pixel = () => {
-    const h = 20;
-    const w = 20;
-    for (let i = 0; i < h; i++) {
-      for (let j = 0; j < w; j++) {
-        let span = document.createElement("span");
-        let random = Math.random() * 0.8;
-        let randomFixed = random.toFixed(2);
-
-        document.getElementById("pixel").appendChild(span);
-        span.style.left = j * 25 + "px";
-        span.style.top = i * 25 + "px";
-        span.style.backgroundPosition = -j * 25 + "px " + -i * 25 + "px, center";
-        span.style.animationDelay = randomFixed + "s";
-      }
-    }
-  }
-
-  useEffect( () => {
-    pixel();
-  }, [])
-  
-
   return (
-    <div className='home' id='Home'>
-      {/* <img src={verdetrans} alt='' id='verdetrans' /> */}
-      <div className='home_box'>
-        <div id='pixel'></div>
+    <div className='home text-2xl' id='Home'>
+      <div className='home-items'>
+        <img className='.animate__animated .animate__heartBeat' src={KSlogo} alt='' id='KSlogo' />
+        <div className='static'>
+          <h2>
+            <span>
+              <ReactTyped strings={["Let's Learn and have fun", "Let's play and explore", "Let's make a change"]}
+                typeSpeed={70}
+                loop={true}
+                loopbackSpeed={10}
+                repeat={Infinity}
+                cursorChar="|"
+                deleteSpeed={20}
+                delaySpeed={1000}
+                showCursor={false}
+              />
+            </span>
+          </h2>
+          <br></br>
+        </div>
+        {/* <div id='itemm1'> 
+          <p>Let's Learn & have fun </p>  
+        </div>    */}
+        <img src={co} alt='co' id='co' />
+        <img src={codown} alt='codown' id='codown' />
+        <img src={codown} alt='coleft' id='coleft' />
       </div>
     </div>
   );

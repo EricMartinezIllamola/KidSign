@@ -55,66 +55,11 @@ NARANJA FLOJO #EDBB5C */
 }
 
 
-/*---------------------------ABOUT---------------------------*/
-
-.about {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  padding: 0% 10%;
-}
-
-.about h2:first-child {
-  color: #a1f064;
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: 4px;
-}
-
-#aboutcohete,
-#aboutsign,
-#aboutbook {
-  height: 60px;
-  object-fit: contain;
-}
-
-.aboutcontent {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  margin-bottom: 5%;
-  margin-top: 5%;
-  gap: 10px;
-  color: black;
-  font-size: x-large;
-}
-
-.aboutcontent h3 {
-  color:darkorange;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.abouttext {
-  display: flex;
-  flex-direction: column;
-  font-size: xx-large;
-}
-
-.about p {
-  font-size: larger;
-  letter-spacing: 1px;
-}
-
 /*---------------------------FOOTER-------------------------*/
 .Footer {
   background-color: #ff881b;
   width: 100%;
-  height: 150px;
+  height: 80px;
   display: flex;
   align-items: center;
   margin: 0;

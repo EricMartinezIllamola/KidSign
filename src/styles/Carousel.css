@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
 
 .carousel_body {
@@ -27,24 +28,24 @@
 
 .carousel_btn_container {
     position: absolute;
-    bottom: 12%;
-    left: calc(50% - 157.5px);
-    height: 60px;
+    bottom: 8%;
+    left: calc(50% - 135px);
+    height: 50px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0 25px;
     border-radius: 25px;
 }
 
 .carousel_btn {
-    height: 25px;
-    width: 25px;
-    background-color: rgba(255, 166, 0, 0.5);
-    box-shadow: 0 0 10px orange;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(243, 243, 243, 0.5);
+    box-shadow: 0 0 10px rgb(231, 231, 231);
     border-radius: 50%;
     cursor: pointer;
 }

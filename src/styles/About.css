@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway',sans-serif; 
+}
+
+.about-container  {
+    margin-top: 5%;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  .about-container h1 {
+    color: #a1f064;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 5vh;
+    font-family: 'Playpen Sans', cursive; 
+  }
+  
+  h2{
+    font-size: x-large;
+    margin-top: 3%;
+    color: #ff881b;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Playpen Sans', cursive; 
+
+  }
+
+  .about-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    gap: 30px;
+    display:flex;
+    flex-wrap: nowrap;
+    padding: 2%;
+  }
+
+  .about-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 580px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #000;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+
+  #aboutcohete, #aboutsign, #aboutbook{
+    height: 80px;
+    width: auto;
+  }
+
+  .img-container{
+    height: 150px;
+    width: 150px;
+    border: #ff881b 1px solid;
+    background-color: #ff881b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(116, 116, 116);
+    font-size: large;
+    hyphens: auto;
+    text-align: justify;
+    word-spacing: -0.5px;
+    padding: 2%;
+  }
+  
+  p{
+    font-size: x-large;
+  }
+
+  .image{
+    width: 150px;
+    height: 150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .image:hover {
+    -webkit-animation:spin 2s ease-in-out;
+     -moz-animation:spin 2s ease-in-out;
+     animation:spin 2s ease-in-out;
+ }
+ @-moz-keyframes spin {
+     100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+ }
+ @-webkit-keyframes spin {
+     100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+ }
+ @keyframes spin { 
+     100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+ }
+
+  @media (max-width: 1150px) {
+    .about-box {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+  
+    .about-card {
+      height: 500px;
+    }
+  }
+
+
+
+  @media (max-width: 540px) and (min-width: 370px) {
+    .about-box {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+  
+    .about-card {
+      width: 350px;
+      height: auto;
+ 
+    }
+
+    .img-container{
+        height: 100px;
+        width: 100px;
+        margin-top: 2%;
+    }
+
+    #aboutcohete, #aboutsign, #aboutbook{
+        height: 60px;
+        width: auto;
+      }
+  }
+
+
+
+  

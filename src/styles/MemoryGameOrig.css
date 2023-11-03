@@ -1,4 +1,4 @@
-.cards > .frontside > img {
+/* .cards > .frontside > img {
     width: 150px;
     height: 150px;
     object-fit: contain;
@@ -17,7 +17,6 @@
     margin: 10%;
 }
 
-/* background-color:linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
 .cards-container1{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -67,14 +66,12 @@
     width: 200px;
     backdrop-filter: blur(20px);
     position: absolute;
-    /* top: 0;
-    left: 0; */
     z-index: 10;
     display: flex;
     align-items: center;
 }
 
- .boxy{
+.boxy{
     max-width: 751px;
     width: 751px;
     height: auto;
@@ -122,4 +119,4 @@
 
 .stop-clicking{
     pointer-events: none;
-}
+} */

@@ -5,11 +5,6 @@
     background-color: rgb(253, 209, 187)
 }
 
-#monolengua{
-height: 50px;
-width: 50px;
-}
-
 .Sidebar{
 
     width: 20%;
@@ -19,7 +14,10 @@ width: 50px;
 
 .sidecss{
     width: 20%;
+}
 
+.homeli{
+    color: black
 }
 
 .Main-Sections-Container{
@@ -131,20 +129,11 @@ width: 50px;
     width: auto;
 }
 
-#numerosicon, #mujer, #casa, #tablero{
+#numerosicon, #mujer, #casa, #tablero, #gamess, #abcicon {
     height: 40px;
     width: auto;
 }
 
-#abcicon, #home{
-    height: 35px;
-    width: auto;
-}
-
-#gamess{
-    height: 35px;
-    width: auto;
-}
 
 .btnA, .btnA1, .btnA2, .btnA3, .btnA4, .btnA5 {
     display: flex;
@@ -186,5 +175,45 @@ width: 50px;
     height: 80px;
     width: 80px;
     border-radius: 50%;
+}
+
+
+@media (max-width: 965px) and (min-width:670px){
+    .homeli, .vocalesli, .profileli, .abcli, .numli, .globli{
+        display: none;
+}
+.sidecss{
+    width: 100px;
+}
+.L-text{
+    font-size: large;
+}
+}
+
+@media (max-width: 669px) and (min-width:375px){
+    .homeli, .vocalesli, .profileli, .abcli, .numli, .globli{
+        display: none;
+}
+.sidecss{
+    width: 100px;
+}
+.L-text{
+    font-size:medium;
+}
+
+.btn, .btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btnA, .btnA1, .btnA2, .btnA3, .btnA4, .btnA5 {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.btn01, .btn11, .btn22, .btn33, .btn44, .btn55, .btnG0, .btnG1, .btnG2, .btnG3, .btnG4, .btnG5{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+}
+
+
 }
 

@@ -34,7 +34,7 @@ function Auth0ProviderWithConfig() {
 
   useEffect(() => {
     // Realizar una solicitud al backend para obtener la configuración de Auth0
-    axios.get('http://localhost:5000/login') // tiene que concidir con la que he hecho en el backend(lo que puse en el app.get)
+    axios.get('https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/login') // tiene que concidir con la que he hecho en el backend(lo que puse en el app.get)
       .then((response) => {
         setAuth0Config(response.data);
       })
@@ -54,7 +54,7 @@ return (
   <Auth0Provider
     domain={AUTH0_DOMAIN}
     clientId={AUTH0_CLIENT_ID}
-    authorizationParams={{ redirect_uri: 'http://localhost:3000/Jugadores'}}
+    authorizationParams={{ redirect_uri: 'https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/Jugadores'}}
   >
     <App />
   </Auth0Provider>

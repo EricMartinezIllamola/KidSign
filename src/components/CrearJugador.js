@@ -35,7 +35,7 @@ const CrearJugador = () => {
     }
     
     try { // Enviar info al backen (del jugador)
-      const response = await axios.post('http://localhost:5000/CrearJugador', {
+      const response = await axios.post('https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/CrearJugador', {
         nombre: nombreJugador,
         userId: user.sub,
         imagen: selectedImage,

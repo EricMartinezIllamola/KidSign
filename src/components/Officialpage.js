@@ -17,95 +17,84 @@ const Officialpage = () => {
     <div className='Main-container'>
       <div className='Sidebar'>
         <ul className="sidecss menu bg-base-100 h-full .w-70 rounded-box fixed ">
-          <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box' >
+          <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <Link to='/'>
             <img src={casa} alt="casa" id='casa'/>
-          HOME
+          <strong className='homeli'>HOME</strong>
             </Link>
           </li>
-          {/* <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
-            <Link>
-            <img width="28" height="28" src={games} alt="launch-box"/>
-            GAMES
-            </Link>
-          </li> */}
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <Link to='/Jugadores'>
               <img src={mujer} alt='' id='mujer' />
-              PROFILE
+              <strong className='profileli'>PROFILE</strong>
             </Link>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box' href='#abecedario-ae'>
             <a href='#vocales'>
               <img src={tablero} alt='' id='tablero' />
-              VOCALES
+              <strong className='vocalesli'>VOCALES</strong>
             </a>
           </li>
 
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box' href='#abecedario-ae'>
             <a href='#abecedario-ae'>
-              {/* <img src={abcicon} alt='' id='abcicon' /> */}
-              ABECEDARIO A-E
+              A-E
             </a>
           </li>
 
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <a href='#abecedario-fj'>
-              {/* <img src={abcicon} alt='' id='abcicon' /> */}
-              ABECEDARIO F-J
+              F-J
             </a>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <a href='#abecedario-ko'>
-              {/* <img src={abcicon} alt='' id='abcicon' /> */}
-              ABECEDARIO K-O
+              K-O
             </a>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <a href='#abecedario-pt'>
-              {/* <img src={abcicon} alt='' id='abcicon' /> */}
-              ABECEDARIO P-T
+              P-T
             </a>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <a href='#abecedario-uz'>
-              {/* <img src={abcicon} alt='' id='abcicon' /> */}
-              ABECEDARIO U-Z
+              U-Z
             </a>
           </li>   
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box' href='#abecedario-ae'>
             <a href='#abecedario-global'>
               <img src={abcicon} alt='' id='abcicon' />
-              ABECEDARIO
+              <strong className='abcli'>ABECEDARIO</strong>
             </a>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box' href='#abecedario-ae'>
             <a href='#losnumeros04'>
-              LOS NÚMEROS 0-4
+              0-4
             </a>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box' href='#abecedario-ae'>
             <a href='#losnumeros59'>
-              LOS NÚMEROS 5-9
+              5-9
             </a>
           </li>         
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
             <a href='#numero-global'>
               <img src={numerosicon} alt='' id='numerosicon' />
-              LOS NUMEROS
+              <strong className='numli'>NÚMEROS</strong>
             </a>
           </li>
           <li className='hover:bg-orange-600 active:bg-orange-700 rounded-box'>
-            <a href='#global'>
+            <a href='#globals'>
               <img src={gamess} alt='' id='gamess' />
-              GLOBALES
+              <strong className='globli'>GLOBALES</strong>
             </a>
           </li>
 
         </ul>
       </div>
       <div className='Main-Sections-Container'>
-        <div className='section-vocals' id='vocales'> <strong>Lección 1: LAS VOCALES </strong> </div>
+        <div className='section-vocals' id='vocales'> <strong className='L-text'>Lección 1: LAS VOCALES </strong> </div>
         <div className='vocals-path'>
 
           <ul className='btnlist'>
@@ -141,7 +130,7 @@ const Officialpage = () => {
           </ul>
         </div>
 
-        <div className='section-letters' id='abecedario-ae'><strong>Lección 2| 2.1: EL ABECEDARIO A-E</strong> </div>
+        <div className='section-letters' id='abecedario-ae'><strong className='L-text'>Lección 2| EL ABECEDARIO A-E</strong> </div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li>
@@ -170,7 +159,7 @@ const Officialpage = () => {
           </ul>
         </div>
 
-        <div className='section-letters' id='abecedario-fj'><strong>Lección 2.2: EL ABECEDARIO F-J  </strong> </div>
+        <div className='section-letters' id='abecedario-fj'><strong className='L-text'> EL ABECEDARIO F-J  </strong> </div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
@@ -185,7 +174,7 @@ const Officialpage = () => {
               <Link to='/SelecGamFJ'> <button className='btnA5'><img src={party} alt='' id='party'/></button> </Link></li>
           </ul>
         </div>
-        <div className='section-letters' id='abecedario-ko'><strong>Lección 2.3: EL ABECEDARIO K-O  </strong> </div>
+        <div className='section-letters' id='abecedario-ko'><strong className='L-text'> EL ABECEDARIO K-O  </strong> </div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
@@ -200,7 +189,7 @@ const Officialpage = () => {
               <Link to='/SelecGamKOSin'> <button className='btnA5'><img src={party} alt='' id='party'/></button> </Link></li>
           </ul>
         </div>
-        <div className='section-letters' id='abecedario-pt'><strong>Lección 2.4: EL ABECEDARIO P-T  </strong> </div>
+        <div className='section-letters' id='abecedario-pt'><strong className='L-text'> EL ABECEDARIO P-T  </strong> </div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
@@ -216,7 +205,7 @@ const Officialpage = () => {
               <Link to='/SelecGamPTSin'> <button className='btnA5'><img src={party} alt='' id='party'/></button> </Link></li>
           </ul>
         </div>
-        <div className='section-letters' id='abecedario-uz'><strong>Lección 2.5: EL ABECEDARIO U-Z  </strong> </div>
+        <div className='section-letters' id='abecedario-uz'><strong className='L-text'> EL ABECEDARIO U-Z  </strong> </div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
@@ -246,7 +235,7 @@ const Officialpage = () => {
               </li>
           </ul>
         </div>
-        <div className='section-letters' id='abecedario-global'><strong>Lección 2.6: EL ABECEDARIO GLOBAL  </strong> </div>
+        <div className='section-letters' id='abecedario-global'><strong className='L-text'> EL ABECEDARIO GLOBAL  </strong> </div>
         <div className='vocals-path'>
           <ul className='btnlist'>
               <Link to='/SelecGamAlphabet'> 
@@ -257,11 +246,7 @@ const Officialpage = () => {
                 <button className='btnA3'><img src='https://img.icons8.com/color/48/launch-box.png' alt='' id='launchbox'/></button> 
                 </Link>
                 </li>
-            {/* <li>
-              <Link to='/MemoryGamegloballetras'> 
-              <button className='btnA4'><img src={Memory} alt='' id='Memory'/></button> 
-              </Link>
-              </li>  */}
+
             <li> 
               <Link to='/SelecGamAlphabet'> 
               <button className='btnA5'><img src={party} alt='' id='party'/></button> 
@@ -270,7 +255,7 @@ const Officialpage = () => {
           </ul>
         </div>
         
-        <div className='section-number'id='losnumeros04'> <strong>Lección 3| LOS NÚMEROS 0-4</strong></div>
+        <div className='section-number'id='losnumeros04'> <strong className='L-text'>Lección 3| LOS NÚMEROS 0-4</strong></div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
@@ -290,7 +275,7 @@ const Officialpage = () => {
               </li>
           </ul>
         </div>
-        <div className='section-number'id='losnumeros59'> <strong>Lección 3| 3.2 LOS NÚMEROS 5-9</strong></div>
+        <div className='section-number'id='losnumeros59'> <strong className='L-text'>Lección 3| LOS NÚMEROS 5-9</strong></div>
         <div className='vocals-path'>
           <ul className='btnlist'>
             <li> 
@@ -310,7 +295,7 @@ const Officialpage = () => {
               </li>
           </ul>
         </div>
-        <div className='section-number'id='numero-global'> <strong>Lección 3| LOS NÚMEROS GLOBALES </strong></div>
+        <div className='section-number'id='numero-global'> <strong className='L-text'>Lección 3| NÚMEROS GLOBALES </strong></div>
         <div className='vocals-path'>
           <ul className='btnlist'>
               <Link to='/SelecGamNum'><button className='btn11'> <img src={numerosicon} alt='' id='numerosicon' /> </button></Link>
@@ -325,15 +310,13 @@ const Officialpage = () => {
               </li>
           </ul>
         </div>
-        <div className='section-global'id='global'> <strong>Lección 4 | GLOBALES </strong></div>
+        <div className='section-global'id='global'> <strong className='L-text'>Lección 4 | GLOBALES </strong></div>
         <div className='vocals-path'>
           <ul className='btnlist'>
               <Link to='/SelecGamGlobal'><button className='btnG0'> <img src={numerosicon} alt='' id='numerosicon' /> </button></Link>
             <li> 
               <Link to='/QuizzGlobal'><button className='btnG2'> <img src='https://img.icons8.com/color/48/launch-box.png' alt='' id='launchbox'/>  </button></Link></li>
-            {/* <li> NO MEMORI GLOBAL
-              <Link to='/'><button className='btnG3'> <img src={Memory} alt='' id='Memory'/> </button></Link>
-              </li> */}
+  
             <li> 
               <Link to='/SelecGamGlobalSin'><button className='btnG4'> <img src={party} alt='' id='party'/>  </button></Link>
               </li>

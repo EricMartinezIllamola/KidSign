@@ -23,7 +23,7 @@ import adbtn from '../assets/addboton.png';
       // Realiza una solicitud al backend para obtener la lista de jugadores
       const auth0Id = user.sub;
       axios
-        .get(`http://localhost:5000/MostrarJugadors/${auth0Id}`)
+        .get(`https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/MostrarJugadors/${auth0Id}`)
         .then((response) => {
           setPlayer(response.data);
           console.log(response.data)

@@ -145,7 +145,7 @@ useEffect(() => {
     };
     console.log(userData)
     // Realiza una solicitud POST para guardar los datos del usuario
-    axios.post('http://localhost:5000/perfil', userData)
+    axios.post('https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/perfil', userData)
       .then(response => {
         // Maneja la respuesta del servidor, si es necesario
         setUserDataSaved(true); // Marca los datos como guardados para evitar repeticiones

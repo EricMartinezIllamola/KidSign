@@ -1,99 +1,152 @@
 .home {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-self: center;
+    margin-top: 6.5rem;
+    align-content: center;
+    text-align: center;
+    color: rgb(5, 5, 5);
+  }
+  
+  .home-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
     align-items: center;
-    min-height: 90vh;
-    width: 100%;
+    margin-bottom: 15%;
   }
 
-  .home_box {
-    position: relative;
-    width: 500px;
-    height: 500px;
+  /* #itemm1 > p{
+    display: flex;
+    margin-top: -20% ;
+    margin-bottom: 10%;
+    color: #a1f064;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Playpen Sans', cursive;
   }
 
-  .home_box span {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-image: url("../assets/Mainimagenes/verdetrans.png");
-    background-repeat: no-repeat;
-    animation: animate 14s linear infinite;
-  }
-
-  @keyframes animate {
-    0%, 15% {
-      scale: 1;
-      rotate: 0deg;
-      translate: 0 0;
-      transform-origin: center;
-    }
-    20%, 25% {
-      scale: 0.8;
-      rotate: 0deg;
-      translate: 0 0;
-      transform-origin: center;
-    }
-    30% {
-      scale: 0.8;
-      rotate: 360deg;
-      translate: 350px 75px;
-      transform-origin: 200px;
-    }
-    35%, 45% {
-      scale: 1;
-      rotate: 360deg;
-      translate: 350px 75px;
-      transform-origin: center;
-    }
-    50% {
-      scale: 0.8;
-      rotate: 360deg;
-      translate: 350px 75px;
-      transform-origin: 200px;
-    }
-    55% {
-      scale: 0.8;
-      rotate: 720deg;
-      translate: -350px -75px;
-      transform-origin: -200px;
-    }
-    60%, 70% {
-      scale: 1;
-      rotate: 720deg;
-      translate: -350px -75px;
-      transform-origin: center;
-    }
-    75% {
-      scale: 0.8;
-      rotate: 720deg;
-      translate: -350px -75px;
-      transform-origin: -200px;
-    }
-    80% {
-      scale: 0.8;
-      rotate: 0deg;
-      translate: 0 0;
-      transform-origin: center;
-      background-color: transparent;
-    }
-    85%, 95% {
-      scale: 1;
-      rotate: 0deg;
-      translate: 0 0;
-      transform-origin: center;
-      background-color: lightgoldenrodyellow;
-    }
-    100% {
-      scale: 1;
-      rotate: 0deg;
-      translate: 0 0;
-      transform-origin: center;
-      background-color: transparent;
-    }
-  }
-
-  /* #verdetrans {
-    width: 650px;
-    object-fit: contain; 
+  #itemm1{
+    z-index: 1;
   } */
+
+  #KSlogo{
+    display: flex;
+    width: auto;
+    height: 31rem;
+    margin-top: -20%;
+    z-index: 1;
+  }
+
+  .static{
+    z-index: 1;
+  }
+
+  .static span{
+    margin-bottom: 100px;
+    color:  #a1f064;
+    z-index: 1;
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4rem;
+  }
+
+  #co {
+    position: absolute;
+    height: 30rem;
+    width: auto;
+    /* right: 60%;
+    top: 8%; */
+    transform: rotate(-90deg);
+  }
+
+  #coleft{
+    position: absolute;
+    height: 40rem;
+    width: auto;
+    transform: scaleX(-1);
+    left:0;
+  
+  }
+
+#codown{
+  position: absolute;
+    height: 40rem;
+    width: auto;
+    right: 0;
+  } 
+
+  @media (max-width:1120px) and (min-width:725px){
+    #co{
+      height: auto;
+      width: 52rem;
+      transform: rotate(180deg);
+    }
+
+    #coleft, #codown{
+      display: none;
+    }
+
+    #KSlogo{
+      margin-top: -10%
+    }
+
+    span{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4.5rem;
+    }
+
+}
+
+@media (max-width:724px) and (min-width:526px){
+  #co{
+    height: auto;
+    width: 40rem;
+    transform: rotate(180deg);
+  }
+
+  #coleft, #codown{
+    display: none;
+  }
+
+  span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3rem;
+  }
+}
+ 
+  @media (max-width:525px) and (min-width:370px){
+    #co{
+      height: auto;
+      width: 52rem;
+      transform: rotate(180deg);
+    }
+
+    #coleft, #codown{
+      display: none;
+    }
+
+    #KSlogo{
+      display: flex;
+      width: auto;
+      height: 25rem;
+      z-index: 1;
+    }
+
+    span{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3.5rem;
+    }
+  }
