@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KidSign/static/css/main.dca392ba.css",
-    "main.js": "/KidSign/static/js/main.f8d2b1ed.js",
+    "main.css": "/KidSign/static/css/main.950ab419.css",
+    "main.js": "/KidSign/static/js/main.ff53a6ce.js",
     "static/media/foto.jpg": "/KidSign/static/media/foto.965ae3c9d20bf491546f.jpg",
     "static/media/Alex_Cosme.jpg": "/KidSign/static/media/Alex_Cosme.28369594f1618511b277.jpg",
     "static/media/monitos.jpeg": "/KidSign/static/media/monitos.2d08aca45c60cda3afad.jpeg",
@@ -16,7 +16,8 @@
     "static/media/Jugadoresdos.jpg": "/KidSign/static/media/Jugadoresdos.6728b4a015153bb0c6e8.jpg",
     "static/media/monolengua.png": "/KidSign/static/media/monolengua.23ddf661f6364438bce6.png",
     "static/media/Monorama.png": "/KidSign/static/media/Monorama.829f44046f076ebcb9ea.png",
-    "static/media/verdetrans.png": "/KidSign/static/media/verdetrans.227f0a4372804c0ee393.png",
+    "static/media/co.png": "/KidSign/static/media/co.a8e7efbbbec101089bcc.png",
+    "static/media/KSlogo.png": "/KidSign/static/media/KSlogo.227f0a4372804c0ee393.png",
     "static/media/monosentado.png": "/KidSign/static/media/monosentado.e9507d1d816561eabad4.png",
     "static/media/linkedin.png": "/KidSign/static/media/linkedin.7ab7f69ae322f5a4a1d5.png",
     "static/media/14B.png": "/KidSign/static/media/14B.613eeb8e15d6a1452a97.png",
@@ -31,6 +32,7 @@
     "static/media/gsign.png": "/KidSign/static/media/gsign.973ab3e585c64e5a31a5.png",
     "static/media/1B.png": "/KidSign/static/media/1B.e0a167c062a0824c9b8a.png",
     "static/media/onesign.png": "/KidSign/static/media/onesign.9878c39e60cbdedb2b1d.png",
+    "static/media/codown.png": "/KidSign/static/media/codown.37256e0b595064725de1.png",
     "static/media/5B.png": "/KidSign/static/media/5B.5fd305979b4ef5739fdb.png",
     "static/media/fivesign.png": "/KidSign/static/media/fivesign.3a1368ec5b38f6461294.png",
     "static/media/gamess.png": "/KidSign/static/media/gamess.006f0028abe9cde016aa.png",
@@ -160,11 +162,11 @@
     "static/media/Memory.png": "/KidSign/static/media/Memory.b70294a036fd6b52620c.png",
     "static/media/github.png": "/KidSign/static/media/github.ffa70286205754fefa7e.png",
     "index.html": "/KidSign/index.html",
-    "main.dca392ba.css.map": "/KidSign/static/css/main.dca392ba.css.map",
-    "main.f8d2b1ed.js.map": "/KidSign/static/js/main.f8d2b1ed.js.map"
+    "main.950ab419.css.map": "/KidSign/static/css/main.950ab419.css.map",
+    "main.ff53a6ce.js.map": "/KidSign/static/js/main.ff53a6ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.dca392ba.css",
-    "static/js/main.f8d2b1ed.js"
+    "static/css/main.950ab419.css",
+    "static/js/main.ff53a6ce.js"
   ]
 }
