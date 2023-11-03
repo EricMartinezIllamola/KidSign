@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KidSign/static/css/main.950ab419.css",
-    "main.js": "/KidSign/static/js/main.ff53a6ce.js",
+    "main.js": "/KidSign/static/js/main.172e20c9.js",
     "static/media/foto.jpg": "/KidSign/static/media/foto.965ae3c9d20bf491546f.jpg",
     "static/media/Alex_Cosme.jpg": "/KidSign/static/media/Alex_Cosme.28369594f1618511b277.jpg",
     "static/media/monitos.jpeg": "/KidSign/static/media/monitos.2d08aca45c60cda3afad.jpeg",
@@ -163,10 +163,10 @@
     "static/media/github.png": "/KidSign/static/media/github.ffa70286205754fefa7e.png",
     "index.html": "/KidSign/index.html",
     "main.950ab419.css.map": "/KidSign/static/css/main.950ab419.css.map",
-    "main.ff53a6ce.js.map": "/KidSign/static/js/main.ff53a6ce.js.map"
+    "main.172e20c9.js.map": "/KidSign/static/js/main.172e20c9.js.map"
   },
   "entrypoints": [
     "static/css/main.950ab419.css",
-    "static/js/main.ff53a6ce.js"
+    "static/js/main.172e20c9.js"
   ]
 }
