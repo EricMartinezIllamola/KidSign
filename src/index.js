@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Auth0Provider} from '@auth0/auth0-react';
 import App from './App';
 import axios from 'axios';
- 
+
 
 import main_es from "./assets/translations/es/main.json";
 import main_en from "./assets/translations/en/main.json";
@@ -47,14 +47,14 @@ function Auth0ProviderWithConfig() {
     return <div>Cargando...</div>;
   }
 
-  const { AUTH0_CLIENT_ID, AUTH0_DOMAIN } = auth0Config;
+  // const { AUTH0_CLIENT_ID, AUTH0_DOMAIN } = auth0Config;
 
 return (
   
   <Auth0Provider
-    domain={AUTH0_DOMAIN}
-    clientId={AUTH0_CLIENT_ID}
-    authorizationParams={{ redirect_uri: 'https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/Jugadores'}}
+    domain={'dev-lgz8outtbace26ob.us.auth0.com'}
+    clientId={'TegxGvtner76ZD8hAbJwxaBZe5rf7e1T'}
+    authorizationParams={{ redirect_uri: 'https://localhost:3000/Jugadores'}}
   >
     <App />
   </Auth0Provider>
@@ -67,5 +67,3 @@ root.render(
   <Auth0ProviderWithConfig /> </I18nextProvider>
 </React.StrictMode>
 );
-
-

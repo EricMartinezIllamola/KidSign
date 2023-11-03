@@ -161,7 +161,7 @@ useEffect(() => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main />} /> {/* Donde se ve */}
+          <Route path="/KidSign" element={<Main />} /> {/* Donde se ve */}
           <Route path="/Officialpage" element={<Officialpage />} /> {/* Donde se ve los botones para jugar*/}
           {/*Juegos Leccion*/}
             <Route path="/Section1" element={< Section1/>} />

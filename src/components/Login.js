@@ -11,7 +11,7 @@ const AuthenticationButton = () => {
   const [t, i18n] = useTranslation("main"); //traduccion
 
   return isAuthenticated ? (
-    <button className="ButtonLogin" onClick={() => logout({ returnTo: "https://deploy-kid-mysql-2c2277064ba3.herokuapp.com/" } ) }>
+    <button className="ButtonLogin" onClick={() => logout({ returnTo: "https://localhost:3000/" } ) }>
       <CgProfile/>LogOut
       {/* {t("Navbar.Logout")} */}
     </button>
